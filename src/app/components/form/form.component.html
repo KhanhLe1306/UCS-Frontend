@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" #nameForm="ngForm">
+  <div class="form-group">
+    <label for="firstName">First Name: </label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      required
+      [(ngModel)]="firstName"
+      name="firstName"
+    />
+    <div>{{ firstName }}</div>
+    <div [hidden]="firstName != null || firstName != ''" class="alert alert-danger"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastname">Last Name: </label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastName"
+      required
+      [(ngModel)]="lastName"
+      name="lastName"
+    />
+    <div>{{ lastName }}</div>
+    <div [hidden]="lastName != null || lastName != ''" class="alert alert-danger"></div>
+  </div>
+
+  <button [disabled]="!nameForm.form.valid" type="submit" class="btn btn-success">Submit</button>
+</form>
