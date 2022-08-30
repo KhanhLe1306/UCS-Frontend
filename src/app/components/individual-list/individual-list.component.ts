@@ -16,6 +16,7 @@ export class IndividualListComponent implements OnInit {
     this.individualService.getAllIndividuals().subscribe((res) => {
       console.log('inside getAllIndividuals');
       console.log(res);
+      this.individuals = res;
     });
   }
 }
