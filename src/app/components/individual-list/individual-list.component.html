@@ -1,1 +1,6 @@
-<p>individual-list works!</p>
+<ng-container *ngFor="let i of individuals">
+  <div>
+    <span>{{ i.firstName }} </span>
+    <span>{{ i.lastName }} </span>
+  </div>
+</ng-container>
