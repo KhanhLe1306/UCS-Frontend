@@ -14,4 +14,9 @@ export class IndividualService {
   getAllIndividuals(): Observable<any[]> {
     return this.http.get<any[]>(this.uri + 'individual');
   }
+  addIndividual(individual: Individual): Observable<any> {
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(individual);
+    return this.http.post<any>(this.uri + 'individual', body, {'headers' : headers});
+  }
 }
