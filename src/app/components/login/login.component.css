@@ -16,6 +16,7 @@ label {
 #submitButton {
     background-color: #000000;
     border: none;
+    width: 270px;
     border-radius: 10px;
     padding: 10px 15px;
     text-align: center;
@@ -23,12 +24,13 @@ label {
     display: inline-block;
     font-size: 16px;
     margin-top: 5px;
-    margin-left: 43%;
+    margin-left: 41%;
 }
 
 #signUpButton {
     background-color: #000000;
     border: none;
+    width: 270px;
     border-radius: 10px;
     padding: 10px 15px;
     text-align: center;
@@ -36,15 +38,10 @@ label {
     display: inline-block;
     font-size: 16px;
     margin-top: 5px;
-    margin-left: 3%;
+    margin-left: 41%;
 }
 
-#signUpButton:hover {
-    background-color:#ff0000;
-    transition: 0.5s;
-}
-
-#submitButton:hover {
+#signUpButton:hover, #submitButton:hover {
     background-color:#ff0000;
     transition: 0.5s;
 }
