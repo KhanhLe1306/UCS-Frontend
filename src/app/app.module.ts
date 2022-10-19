@@ -10,9 +10,10 @@ import { IndividualListComponent } from './components/individual-list/individual
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SuccessComponent } from './components/success/success.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent],
+  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule, AngularFileUploaderModule],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
