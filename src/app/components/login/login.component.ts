@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Individual } from 'src/app/Models/Individual';
 import { IndividualService } from 'src/app/services/individual.service';
-import { IndividualListComponent } from '../individual-list/individual-list.component';
 
 @Component({
   selector: 'app-login',
