@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 200px;
+    margin-left: 43%;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#submitButton {
+    background-color: #000000;
+    border: none;
+    width: 270px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 41%;
+}
+
+#signUpButton {
+    background-color: #000000;
+    border: none;
+    width: 270px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 41%;
+}
+
+#signUpButton:hover, #submitButton:hover {
+    background-color:#ff0000;
+    transition: 0.5s;
+}

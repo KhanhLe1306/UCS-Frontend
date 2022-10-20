@@ -1,0 +1,34 @@
+h1, p {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 270px;
+    margin-left: 41%;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#searchButton:hover, #download:hover, #classAdd:hover, #classRemove:hover {
+    background-color:#ff0000;
+    transition: 0.5s;
+}
+
+#searchButton, #download, #classAdd, #classRemove {
+    background-color: #000000;
+    border: none;
+    width: 270px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 41%;
+}
+

@@ -4,11 +4,11 @@ import { IndividualService } from 'src/app/services/individual.service';
 import { IndividualListComponent } from '../individual-list/individual-list.component';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class FormComponent implements OnInit {
+export class LoginComponent implements OnInit {
   firstName: string = '';
   lastName: string = '';
   userName: string = '';
