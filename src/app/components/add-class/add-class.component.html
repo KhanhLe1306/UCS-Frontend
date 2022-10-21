@@ -1,0 +1,51 @@
+<h1>Enter New Class Information</h1>
+<form (ngSubmit)="onSubmit()" #classForm="ngForm">
+    <div class="add-group">
+        <label for="courseNum"></label>
+        <input 
+            type="text"
+            class="class-control"
+            id="courseNum"
+            required
+            name="courseNum"
+            placeholder="Course Number"
+        />
+    </div>
+
+    <div class="add-group">
+        <label for="sectionNum"></label>
+        <input 
+            type="text"
+            class="class-control"
+            id="sectionNum"
+            required
+            name="sectionNum"
+            placeholder="Seciton Number"
+        />
+    </div>
+
+    <div class="add-group">
+        <label for="instructor"></label>
+        <input 
+            type="text"
+            class="class-control"
+            id="instructor"
+            required
+            name="instructor"
+            placeholder="Instructor"
+        />
+    </div>
+
+    <div class="add-group">
+        <label for="classSize"></label>
+        <input 
+            type="text"
+            class="class-control"
+            id="classSize"
+            required
+            name="classSize"
+            placeholder="Class Size"
+        />
+    </div>
+    <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success">Submit</button>
+</form>
