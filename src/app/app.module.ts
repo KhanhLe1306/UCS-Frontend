@@ -12,9 +12,11 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SuccessComponent } from './components/success/success.component';
 import { AddClassComponent } from './components/add-class/add-class.component';
+import { RemoveClassComponent } from './components/remove-class/remove-class.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent, AddClassComponent],
+  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent, AddClassComponent, RemoveClassComponent, SearchResultsComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule, AngularFileUploaderModule],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],

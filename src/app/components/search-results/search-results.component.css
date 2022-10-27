@@ -1,0 +1,35 @@
+div { 
+    width:300px; 
+    height:300px; 
+    background-color:#F5F2F2; 
+    border:3px solid black; 
+    margin-left: 40%;
+    border-radius: 10px;
+} 
+
+h1, p {
+    text-align: center;
+}
+
+#searchResult {
+    margin-top: 40%;
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    width: 270px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 41%;
+}
+
+button:hover {
+    background-color:#ff0000;
+    transition: 0.5s;
+}
