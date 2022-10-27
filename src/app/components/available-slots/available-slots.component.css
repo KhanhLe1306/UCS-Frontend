@@ -1,0 +1,31 @@
+#classSlot { 
+    width:300px; 
+    height:210px; 
+    background-color:#F5F2F2; 
+    border:3px solid black; 
+    margin-left: 40%;
+    border-radius: 10px;
+} 
+
+h1, p {
+    text-align: center;
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 25%;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color:#ff0000;
+    transition: 0.5s;
+}
