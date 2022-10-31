@@ -14,9 +14,10 @@ import { SuccessComponent } from './components/success/success.component';
 import { AddClassComponent } from './components/add-class/add-class.component';
 import { RemoveClassComponent } from './components/remove-class/remove-class.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent, AddClassComponent, RemoveClassComponent, SearchResultsComponent],
+  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent, AddClassComponent, RemoveClassComponent, SearchResultsComponent, AvailableSlotsComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule, AngularFileUploaderModule],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
