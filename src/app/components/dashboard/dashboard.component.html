@@ -1,27 +1,34 @@
 <h1>UNO Classroom Scheduler</h1>
-<form (ngSubmit)="onSubmit()" #searchForm="ngForm">
-    <div class="dashSearch">
-        <label for="classSearch">View Current Schedule</label><br>
-        <input 
-            type="text"
-            class="dashSearch-control"
-            id="dashSearch"
-            [(ngModel)]="dashSearch"
-            placeholder="Search classes, professors, rooms"
-        /><br>
-    </div>
-    <button id="searchButton" type="submit" class="btn btn-success">Search</button>
+<form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
+  <div class="dashSearch">
+    <label for="dashSearch">View Current Schedule</label><br />
+    <input
+      type="text"
+      class="dashSearch-control"
+      id="dashSearch"
+      formControlName="inputValue"
+      placeholder="Search classes, professors, rooms"
+    /><br />
+  </div>
+  <button id="searchButton" type="submit" class="btn btn-success" [routerLink]="'/results'">
+    Search
+  </button>
 </form>
-<br>
+<br />
 <div class="suggestChanges">
-    <p>Suggest Changes</p>
-    <button id="classAdd" type="submit" class="btn btn-success">Add a Class</button>
-    <button id="classRemove" type="submit" class="btn btn-success">Remove a Class</button>
+  <p>Suggest Changes</p>
+  <button id="classAdd" type="submit" class="btn btn-success" [routerLink]="'/addClass'">
+    Add a Class
+  </button>
+  <button id="classRemove" type="submit" class="btn btn-success" [routerLink]="'/removeClass'">
+    Remove a Class
+  </button>
 </div>
-<br>
+<br />
 <div class="downloadCSV">
-    <p>Download</p>
-    <button id="download" type="submit" class="btn btn-success">Download Current Schedule as CSV</button>
+  <p>Download</p>
+  <button id="download" type="submit" class="btn btn-success" [routerLink]="'/success'">
+    Download Current Schedule as CSV
+  </button>
+  <button id="logOut" type="button" class="btn btn-success" [routerLink]="'/login'"></button>
 </div>
-    
-
