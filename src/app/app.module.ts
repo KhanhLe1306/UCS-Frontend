@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
 
 import { AppComponent } from './app.component';
@@ -17,8 +18,26 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, IndividualListComponent, FileUploadComponent, LoginComponent, DashboardComponent, SuccessComponent, AddClassComponent, RemoveClassComponent, SearchResultsComponent, AvailableSlotsComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AngularFileUploaderModule],
+  declarations: [
+    AppComponent,
+    FormComponent,
+    IndividualListComponent,
+    FileUploadComponent,
+    LoginComponent,
+    DashboardComponent,
+    SuccessComponent,
+    AddClassComponent,
+    RemoveClassComponent,
+    SearchResultsComponent,
+    AvailableSlotsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFileUploaderModule,
+    ReactiveFormsModule,
+  ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
