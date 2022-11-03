@@ -47,5 +47,5 @@
             placeholder="Class Size"
         />
     </div>
-    <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success">Submit</button>
+    <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/success'">Submit</button>
 </form>

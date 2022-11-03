@@ -55,5 +55,5 @@
     <div [hidden]="password != null || lastName != ''" class="alert alert-danger"></div>
   </div>
 
-  <button [disabled]="!nameForm.form.valid" type="submit" class="btn btn-success">Sign up</button>
+  <button [disabled]="!nameForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/login'">Sign up</button>
 </form>
