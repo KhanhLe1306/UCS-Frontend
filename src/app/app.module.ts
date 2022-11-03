@@ -16,6 +16,7 @@ import { AddClassComponent } from './components/add-class/add-class.component';
 import { RemoveClassComponent } from './components/remove-class/remove-class.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AvailableSlotsComponent } from './components/available-slots/available-
     HttpClientModule,
     AngularFileUploaderModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],

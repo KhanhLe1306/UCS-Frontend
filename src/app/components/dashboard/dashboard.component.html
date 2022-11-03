@@ -10,24 +10,25 @@
       placeholder="Search classes, professors, rooms"
     /><br />
   </div>
-  <button id="searchButton" type="submit" class="btn btn-success">
+  <button id="searchButton" type="submit" class="btn btn-success" [routerLink]="'/results'">
     Search
   </button>
 </form>
 <br />
 <div class="suggestChanges">
   <p>Suggest Changes</p>
-  <button id="classAdd" type="submit" class="btn btn-success">
+  <button id="classAdd" type="submit" class="btn btn-success" [routerLink]="'/addClass'">
     Add a Class
   </button>
-  <button id="classRemove" type="submit" class="btn btn-success">
+  <button id="classRemove" type="submit" class="btn btn-success" [routerLink]="'/removeClass'">
     Remove a Class
   </button>
 </div>
 <br />
 <div class="downloadCSV">
   <p>Download</p>
-  <button id="download" type="submit" class="btn btn-success">
+  <button id="download" type="submit" class="btn btn-success" [routerLink]="'/success'">
     Download Current Schedule as CSV
   </button>
+  <button id="logOut" type="button" class="btn btn-success" [routerLink]="'/login'"></button>
 </div>
