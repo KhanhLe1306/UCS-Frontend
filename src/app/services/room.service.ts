@@ -1,18 +1,24 @@
+import { getLocaleDayNames } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class RoomService {
-  private uri: string = 'https://localhost:7019/api/room/';
+export class RoomService extends BaseService {
+  constructor(public httpClient: HttpClient) {
+    super(httpClient);
+  }
 
-  constructor(private http: HttpClient) {}
+  routes = {
+    GetScheduleByRoomNumber: (roomNumber: string) =>
+      `room/getScheduleByRoomNumber/${roomNumber}`,
+  };
 
   getScheduleByRoomNumber(roomNumber: string): Observable<any[]> {
-    return this.http.get<any[]>(
-      this.uri + `getScheduleByRoomNumber/${roomNumber}`
-    );
+    const url = this.routes.GetScheduleByRoomNumber(roomNumber);
+    return this.sendRequest({ url: url, method: 'GET' });
   }
 }
