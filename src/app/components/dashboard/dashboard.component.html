@@ -1,4 +1,3 @@
-<h1>UNO Classroom Scheduler</h1>
 <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
   <div class="dashSearch">
     <label for="dashSearch">View Current Schedule</label><br />
@@ -7,7 +6,7 @@
       class="dashSearch-control"
       id="dashSearch"
       formControlName="inputValue"
-      placeholder="Search classes, professors, rooms"
+      placeholder="Enter a room number to find slots"
     /><br />
   </div>
   <button id="searchButton" type="submit" class="btn btn-success">
@@ -26,9 +25,12 @@
 </div>
 <br />
 <div class="downloadCSV">
-  <p>Download</p>
+  <p>Other Options</p>
   <button id="download" type="submit" class="btn btn-success" [routerLink]="'/success'">
     Download Current Schedule as CSV
   </button>
-  <button id="logOut" type="button" class="btn btn-success" [routerLink]="'/login'"></button>
+  <button id="upload" type="submit" class="btn btn-success" [routerLink]="'/success'">
+    Upload Current Schedule as CSV
+  </button>
+  <button id="logOut" type="button" class="btn btn-success" [routerLink]="'/login'">Log out</button>
 </div>

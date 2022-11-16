@@ -42,6 +42,6 @@ label {
 }
 
 #signUpButton:hover, #submitButton:hover {
-    background-color:#ff0000;
+    background-color:maroon;
     transition: 0.5s;
 }
