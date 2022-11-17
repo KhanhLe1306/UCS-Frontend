@@ -12,7 +12,11 @@ export class DashboardComponent implements OnInit {
     inputValue: new FormControl(''),
   });
 
-  constructor(private roomService: RoomService) {}
+  constructor(private roomService: RoomService) {
+    const searchButton = document.getElementById('searchButton');
+    searchButton?.addEventListener('click', this.onSubmit);
+  }
+
 
   onSubmit() {
     console.log('Onsubmit works!');

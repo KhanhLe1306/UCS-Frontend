@@ -13,12 +13,12 @@ label {
     text-align: center;
 }
 
-#searchButton:hover, #download:hover, #classAdd:hover, #classRemove:hover {
-    background-color:#ff0000;
+#searchButton:hover, #download:hover, #classAdd:hover, #classRemove:hover, #logOut:hover, #upload:hover {
+    background-color: maroon;
     transition: 0.5s;
 }
 
-#searchButton, #download, #classAdd, #classRemove {
+#searchButton, #download, #classAdd, #classRemove, #logOut, #upload {
     background-color: #000000;
     border: none;
     width: 270px;
