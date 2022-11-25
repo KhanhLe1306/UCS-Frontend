@@ -12,22 +12,27 @@
 <br />
 <div class="downloadCSV">
   <p>Other Options</p>
-  <button
-    id="download"
-    type="submit"
-    class="btn btn-success"
-    [routerLink]="'/success'"
-  >
-    Download Current Schedule as CSV
-  </button>
-  <button
-    id="upload"
-    type="submit"
-    class="btn btn-success"
-    [routerLink]="'/success'"
-  >
-    Upload Current Schedule as CSV
-  </button>
+  <div>
+    <button
+      id="download"
+      type="submit"
+      class="btn btn-success"
+      [routerLink]="'/success'"
+    >
+      Download Current Schedule as CSV
+    </button>
+  </div>
+  <div>
+    <button
+      id="upload"
+      type="submit"
+      class="btn btn-success"
+      [routerLink]="'/success'"
+    >
+      Upload Current Schedule as CSV
+    </button>
+  </div>
+  <div>
   <button
     id="logOut"
     type="button"
@@ -36,4 +41,5 @@
   >
     Log out
   </button>
+  </div>
 </div>
