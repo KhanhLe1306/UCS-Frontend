@@ -2,3 +2,7 @@
 * {
     font-family: "Poppins", sans-serif;
 }
+
+body {
+    background-image: url('assets/images/omavs-zoom1.jpg');
+}
