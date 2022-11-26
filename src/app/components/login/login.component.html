@@ -26,6 +26,10 @@
     <div [hidden]="password != null || password != ''" class="alert alert-danger"></div>
   </div>
 
-  <button id="submitButton" [disabled]="!loginForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/dashboard'">Log in</button>
-  <button id="signUpButton" type="submit" class="btn btn-success" [routerLink]="'/form'">Sign up</button>
-</form>
+  <div>
+    <button id="submitButton" [disabled]="!loginForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/dashboard'">Log in</button>
+  </div>
+  <div>
+    <button id="signUpButton" type="submit" class="btn btn-success" [routerLink]="'/form'">Sign up</button>
+  </div>
+  </form>

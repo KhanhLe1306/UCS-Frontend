@@ -10,7 +10,7 @@ import { FormComponent } from './components/form/form.component';
 import { LoginComponent } from './components/login/login.component';
 import { RemoveClassComponent } from './components/remove-class/remove-class.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
-
+import { AddInstructorComponent } from './components/add-instructor/add-instructor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'removeClass', component: RemoveClassComponent},
   { path: 'results', component: SearchResultsComponent},
+  { path: 'addInstructor', component: AddInstructorComponent}
 ];
 
 @NgModule({

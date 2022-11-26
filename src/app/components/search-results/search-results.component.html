@@ -1,11 +1,139 @@
-<h1>Course Options</h1>
-<div id="result">
-    <p id="searchResult">This is just filler text right now, eventually this will be search resuts!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
+    <div class="dashSearch">
+      <label for="dashSearch">View Current Schedule</label><br />
+      <input
+        type="text"
+        class="dashSearch-control"
+        id="dashSearch"
+        formControlName="inputValue"
+        placeholder="Enter a room number to find slots"
+      /><br />
+    </div>
+    <button id="searchButton" type="submit" class="btn btn-success">
+      Search
+    </button>
+    </form>
+  <!-- <ng-container *ngFor="let i of roomSchedule">
+    <div>{{ i.roomName }}</div>
+    <div>{{ i.courseTitle }}</div>
+    <div>{{ i.endTime }}</div>
+    <div>{{ i.meetingDays }}</div>
+    <div>{{ i.roomName }}</div>
+    <div>{{ i.startTime }}</div>
+  </ng-container> -->
+<ng-container *ngIf="roomSchedule">
+    <div class="schedule">
+        <div class="col">
+            <div class="col_title">MON</div>
+            <div class="col_schedule">
+            <ng-container *ngFor="let i of roomSchedule">
+                <ng-container *ngIf="i.meetingDays.includes('Monday')">
+                <div class="class_info" [style.background-color]="i.color">
+                    <div>{{ i.course }}</div>
+                    <div>{{ i.courseTitle }}</div>
+                    <div>{{ i.startTime }} - {{ i.endTime }}</div>
+                </div>
+                </ng-container>
+            </ng-container>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col_title">TUE</div>
+            <div class="col_schedule">
+            <ng-container *ngFor="let i of roomSchedule">
+                <ng-container *ngIf="i.meetingDays.includes('Tuesday')">
+                <div class="class_info" [style.background-color]="i.color">
+                    <div>{{ i.course }}</div>
+                    <div>{{ i.courseTitle }}</div>
+                    <div>{{ i.startTime }} - {{ i.endTime }}</div>
+                </div>
+                </ng-container>
+            </ng-container>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col_title">WED</div>
+            <div class="col_schedule">
+            <ng-container *ngFor="let i of roomSchedule">
+                <ng-container *ngIf="i.meetingDays.includes('Wednesday')">
+                <div class="class_info" [style.background-color]="i.color">
+                    <div>{{ i.course }}</div>
+                    <div>{{ i.courseTitle }}</div>
+                    <div>{{ i.startTime }} - {{ i.endTime }}</div>
+                </div>
+                </ng-container>
+            </ng-container>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col_title">THU</div>
+            <div class="col_schedule">
+            <ng-container *ngFor="let i of roomSchedule">
+                <ng-container *ngIf="i.meetingDays.includes('Thursday')">
+                <div class="class_info" [style.background-color]="i.color">
+                    <div>{{ i.course }}</div>
+                    <div>{{ i.courseTitle }}</div>
+                    <div>{{ i.startTime }} - {{ i.endTime }}</div>
+                </div>
+                </ng-container>
+            </ng-container>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col_title">FRI</div>
+            <div class="col_schedule">
+            <ng-container *ngFor="let i of roomSchedule">
+                <ng-container *ngIf="i.meetingDays.includes('Friday')">
+                <div class="class_info" [style.background-color]="i.color">
+                    <div>{{ i.course }}</div>
+                    <div>{{ i.courseTitle }}</div>
+                    <div>{{ i.startTime }} - {{ i.endTime }}</div>
+                </div>
+                </ng-container>
+            </ng-container>
+            </div>
+        </div>
+        </div>    
+</ng-container>  
+<br />
+
+<div>
+  <button
+    id="addClass"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/addClass'"
+  >
+    Add or Move Class
+  </button>
 </div>
-
-<button id="removeClassButton" type="submit" class="btn btn-success" [routerLink]="'/removeClass'">Remove Class</button>
-<br>
-<button id="moveClassButton" type="submit" class="btn btn-success" [routerLink]="'/addClass'">Move Class</button>
-<br>
-<button id="goHome" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
-
+<div>
+  <button
+    id="removeClass"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/removeClass'"
+  >
+    Remove Class
+  </button>
+</div>
+<div>
+  <button
+    id="addInstructor"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/addInstructor'"
+  >
+    Add Instructor
+  </button>
+</div>
+<div>
+  <button
+      id="goHome"
+      type="button"
+      class="btn btn-success"
+      [routerLink]="'/dashboard'"
+    >
+      Go Home
+  </button>
+</div>

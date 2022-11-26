@@ -54,10 +54,6 @@ export class DashboardComponent implements OnInit {
       });
   }
 
-  dashSearch() {
-    console.log('Searching...');
-  }
-
   ngOnInit(): void {
     this.testRoomSchedule = [
       {

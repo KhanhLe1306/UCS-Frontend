@@ -1,7 +1,6 @@
 <h1>Enter New Class Information</h1>
 <form (ngSubmit)="onSubmit()" #classForm="ngForm">
     <div class="add-group">
-        <label for="courseNum"></label>
         <input 
             type="text"
             class="class-control"
@@ -13,7 +12,6 @@
     </div>
 
     <div class="add-group">
-        <label for="sectionNum"></label>
         <input 
             type="text"
             class="class-control"
@@ -25,7 +23,6 @@
     </div>
 
     <div class="add-group">
-        <label for="instructor"></label>
         <input 
             type="text"
             class="class-control"
@@ -37,7 +34,6 @@
     </div>
 
     <div class="add-group">
-        <label for="classSize"></label>
         <input 
             type="text"
             class="class-control"
@@ -47,5 +43,56 @@
             placeholder="Class Size"
         />
     </div>
+
+    <div class="add-group">
+        <input 
+            type="text"
+            class="class-control"
+            id="classTime"
+            required
+            name="classTime"
+            placeholder="Class Time"
+        />
+    </div>
+
+    <div class="add-group">
+        <input 
+            type="text"
+            class="class-control"
+            id="classRoom"
+            required
+            name="classRoom"
+            placeholder="Class Room Number"
+        />
+    </div>
+    <h1>Select Class Days</h1>  
+    <div class="dowPicker">
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow1">
+            <label for="dow1">M</label>
+        </div>
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow2">
+            <label for="dow2">T</label>
+        </div>
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow3">
+            <label for="dow3">W</label>
+        </div>
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow4">
+            <label for="dow4">T</label>
+        </div>
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow5">
+            <label for="dow5">F</label>
+        </div>
+        <div class="dowPickerOption">
+            <input type="checkbox" id="dow6">
+            <label for="dow6">S</label>
+        </div>
+    </div> 
+    <div>
     <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/success'">Submit</button>
+    </div>
 </form>
