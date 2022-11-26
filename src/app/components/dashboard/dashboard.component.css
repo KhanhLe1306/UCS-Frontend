@@ -30,15 +30,15 @@ label {
 #logOut,
 #upload {
   background-color: #000000;
-    border: none;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    position: relative;
-    left: 50%;
-    margin-left: -125px;
-    margin-top: 5px;
+  border: none;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: 5px;
 }

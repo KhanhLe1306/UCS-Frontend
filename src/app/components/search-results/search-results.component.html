@@ -95,17 +95,9 @@
         </div>
         </div>    
 </ng-container>  
-    
 <br />
-<button
-    id="goHome"
-    type="button"
-    class="btn btn-success"
-    [routerLink]="'/dashboard'"
-  >
-    Go Home
-  </button>
 
+<div>
   <button
     id="addClass"
     type="button"
@@ -114,7 +106,8 @@
   >
     Add or Move Class
   </button>
-
+</div>
+<div>
   <button
     id="removeClass"
     type="button"
@@ -123,3 +116,24 @@
   >
     Remove Class
   </button>
+</div>
+<div>
+  <button
+    id="addInstructor"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/addInstructor'"
+  >
+    Add Instructor
+  </button>
+</div>
+<div>
+  <button
+      id="goHome"
+      type="button"
+      class="btn btn-success"
+      [routerLink]="'/dashboard'"
+    >
+      Go Home
+  </button>
+</div>

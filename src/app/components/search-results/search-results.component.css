@@ -4,8 +4,11 @@ p {
 }
 
 input[type="text"] {
-  width: 270px;
-  margin-left: 41%;
+  width: 250px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-bottom: 5px;
 }
 
 label {
@@ -14,30 +17,24 @@ label {
   text-align: center;
 }
 
-#searchButton:hover,
-#addClass:hover,
-#removeClass:hover,
-#goHome:hover {
+button:hover {
   background-color: maroon;
   transition: 0.5s;
 }
 
-#searchButton,
-#download,
-#addClass,
-#removeClass,
-#goHome {
+button {
   background-color: #000000;
   border: none;
-  width: 270px;
+  width: 250px;
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
   margin-top: 5px;
-  margin-left: 41%;
 }
 
 .class_info {
