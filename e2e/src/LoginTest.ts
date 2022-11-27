@@ -5,7 +5,7 @@ describe('katalon', () => {
 	beforeAll(async () => { });
 	beforeEach(async () => { });
 
-	it('should do something', async () => {
+	it('should login to the app', async () => {
 		await browser.get('http://localhost:4200/login');
 		await element(by.id("userName")).click();
 		await element(by.id("userName")).sendKeys('a');
