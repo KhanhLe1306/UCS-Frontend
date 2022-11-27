@@ -3,18 +3,28 @@ p {
   text-align: center;
 }
 
+.dashSearch {
+  margin-top: 30px;
+}
 input[type="text"] {
   width: 250px;
   position: relative;
   left: 50%;
   margin-left: -125px;
   margin-bottom: 5px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
 }
 
 label {
   display: inline-block;
   width: 100%;
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #989795;
 }
 
 button:hover {
@@ -50,17 +60,20 @@ button {
 }
 
 .col {
-  border-right: 1px solid black;
+  border-right: 2px solid #989795;
 }
 
 .col:nth-child(1) {
-  border-left: 1px solid black;
+  border-left: 2px solid #989795;
 }
 
 .col_title {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #989795;
+  font-size: 24px;
+  font-weight: bold;
+  color: #989795;
 }
 
 .col_schedule {
@@ -73,6 +86,7 @@ button {
   border-radius: 15px;
   background-color: aquamarine;
   padding: 10px;
+  min-height: 120px;
 }
 
 .course__title {
