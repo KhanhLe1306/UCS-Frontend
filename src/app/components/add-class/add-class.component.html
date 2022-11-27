@@ -48,11 +48,33 @@
         <input 
             type="text"
             class="class-control"
-            id="classTime"
+            id="classStart"
             required
-            name="classTime"
-            placeholder="Class Time"
+            name="classStart"
+            placeholder="Class Start Time (I.E. 0900)"
         />
+    </div>
+
+    <div class="add-group">
+        <input 
+            type="text"
+            class="class-control"
+            id="classEnd"
+            required
+            name="classEnd"
+            placeholder="Class End Time (I.E. 1030)"
+        />
+    </div>
+
+    <div class="add-group">
+        <input 
+        type="text"
+        class="class-control"
+        id="building"
+        required
+        name="building"
+        placeholder="Building Code (I.E. PKI)"
+    />   
     </div>
 
     <div class="add-group">
@@ -93,6 +115,9 @@
         </div>
     </div> 
     <div>
-    <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/success'">Submit</button>
+        <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/success'">Submit</button>
+    </div>
+    <div>
+        <button id="home" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
     </div>
 </form>

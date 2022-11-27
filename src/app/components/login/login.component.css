@@ -36,3 +36,7 @@ label {
     background-color:maroon;
     transition: 0.5s;
 }
+
+button:focus {
+    background-color: maroon;
+  }

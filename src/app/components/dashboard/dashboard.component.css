@@ -17,18 +17,16 @@ label {
   text-align: center;
 }
 
-#searchButton:hover,
-#download:hover,
-#upload:hover,
-#logOut:hover {
+button:hover {
   background-color: maroon;
   transition: 0.5s;
 }
 
-#searchButton,
-#download,
-#logOut,
-#upload {
+button:focus {
+  background-color: maroon;
+}
+
+button {
   background-color: #000000;
   border: none;
   width: 250px;

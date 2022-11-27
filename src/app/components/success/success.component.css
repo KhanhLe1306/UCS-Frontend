@@ -31,6 +31,10 @@ button:hover {
     transition: 0.5s;
 }
 
+button:focus {
+    background-color: maroon;
+}
+
 img {
     display: block;
     margin-left: auto;
