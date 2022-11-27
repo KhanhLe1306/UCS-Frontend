@@ -5,15 +5,17 @@ describe('katalon', () => {
 	beforeAll(async () => { });
 	beforeEach(async () => { });
 
-	it('should login', async () => {
+	it('should go to upload page', async () => {
 		await browser.get('http://localhost:4200/login');
 		await element(by.id("userName")).click();
-		await element(by.id("userName")).sendKeys('a');
+		await element(by.id("userName")).sendKeys('testUser');
 		await element(by.id("password")).click();
-		await element(by.id("password")).sendKeys('a');
+		await element(by.id("password")).sendKeys('testPassword');
 		await element(by.id("submitButton")).click();
 		await browser.get('http://localhost:4200/dashboard');
-		await element(by.id("logOut")).click();
+		await element(by.id("upload")).click();
+		await browser.get('http://localhost:4200/fileUpload');
+		await element(by.id("home")).click();
 	});
 
 	afterEach(async () => {
