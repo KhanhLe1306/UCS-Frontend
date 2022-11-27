@@ -57,20 +57,25 @@ button {
   border-left: 1px solid black;
 }
 
-.col_title{
-    display: flex;
-    justify-content: center;
-    border-bottom:  1px solid black;
+.col_title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
 }
 
-.col_schedule{
-    padding: 15px;
+.col_schedule {
+  padding: 15px;
 }
 
-.class_info{
-    display: block;
-    margin:15px 0;
-    border-radius: 15px;
-    background-color: aquamarine;
-    padding: 10px;
+.class_info {
+  display: block;
+  margin: 15px 0;
+  border-radius: 15px;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.course__title {
+  display: flex;
+  justify-content: space-between;
 }
