@@ -29,3 +29,7 @@ left: 50%;
 margin-left: -125px;
 margin-top: 5px;
 }
+
+button:focus {
+  background-color: maroon;
+}

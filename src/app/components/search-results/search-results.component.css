@@ -22,6 +22,11 @@ button:hover {
   transition: 0.5s;
 }
 
+button:focus {
+  background-color: maroon;
+}
+
+
 button {
   background-color: #000000;
   border: none;
