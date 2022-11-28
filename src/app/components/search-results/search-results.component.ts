@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { stringify } from 'querystring';
 import { RoomService } from 'src/app/services/room.service';
 
@@ -28,8 +28,8 @@ export class SearchResultsComponent implements OnInit {
   ];
   iterator: number;
   testRoomSchedule: any;
-  searchForm = new FormGroup({
-    inputValue: new FormControl(''),
+  searchForm = new UntypedFormGroup({
+    inputValue: new UntypedFormControl(''),
   });
 
   constructor(private roomService: RoomService) {
