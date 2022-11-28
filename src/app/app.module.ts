@@ -18,6 +18,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddInstructorComponent } from './components/add-instructor/add-instructor.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AddInstructorComponent } from './components/add-instructor/add-instruct
     SearchResultsComponent,
     AvailableSlotsComponent,
     AddInstructorComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

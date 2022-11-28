@@ -93,6 +93,7 @@ button {
   background-color: aquamarine;
   padding: 10px;
   min-height: 120px;
+  cursor: pointer;
 }
 
 .course__title {
