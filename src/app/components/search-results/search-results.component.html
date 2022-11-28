@@ -31,7 +31,7 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Monday')">
-            <div (click)="modalService.showModal = true" class="class_info" [style.background-color]="i.color"
+            <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
             [style.marginTop.px]="i.priorCourseInfo['Monday']['marginSize']"
             [style.height.px]="i.priorCourseInfo['Monday']['height']">
               <div class="course__title">
@@ -52,7 +52,7 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Tuesday')">
-            <div (click)="modalService.showModal = true" class="class_info" [style.background-color]="i.color"
+            <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
             [style.marginTop.px]="i.priorCourseInfo['Tuesday']['marginSize']"
             [style.height.px]="i.priorCourseInfo['Tuesday']['height']">
               <div class="course__title">
@@ -73,7 +73,7 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Wednesday')">
-            <div (click)="modalService.showModal = true" class="class_info" [style.background-color]="i.color"
+            <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
             [style.marginTop.px]="i.priorCourseInfo['Wednesday']['marginSize']"
             [style.height.px]="i.priorCourseInfo['Wednesday']['height']">
               <div class="course__title">
@@ -94,7 +94,7 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Thursday')">
-            <div (click)="modalService.showModal = true" class="class_info" [style.background-color]="i.color"
+            <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
             [style.marginTop.px]="i.priorCourseInfo['Thursday']['marginSize']"
             [style.height.px]="i.priorCourseInfo['Thursday']['height']">
               <div class="course__title">
@@ -115,7 +115,7 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Friday')">
-            <div (click)="modalService.showModal = true" class="class_info" [style.background-color]="i.color"
+            <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
             [style.marginTop.px]="i.priorCourseInfo['Friday']['marginSize']"
             [style.height.px]="i.priorCourseInfo['Friday']['height']">
               <div class="course__title">

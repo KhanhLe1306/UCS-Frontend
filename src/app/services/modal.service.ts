@@ -5,5 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class ModalService {
   showModal: boolean = false;
+  scheduleClass: any;
   constructor() { }
 }
