@@ -86,6 +86,7 @@ button {
 }
 
 .class_info {
+  font-size: 0.70em;
   display: block;
   margin: 15px 0;
   border-radius: 15px;
@@ -97,4 +98,27 @@ button {
 .course__title {
   display: flex;
   justify-content: space-between;
+}
+
+.time-col.col_title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #989795;
+  font-size: 24px;
+  font-weight: bold;
+  color: #989795;
+}
+
+.time-col {
+  border-right: 2px solid #989795;
+  width: 5.5rem;
+}
+
+.time-col.col_title {
+  padding-right: 10px;;
+}
+
+.time-item {
+  display: flex;
+  justify-content: center;
 }
