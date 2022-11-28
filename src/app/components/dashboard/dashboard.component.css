@@ -4,8 +4,11 @@ p {
 }
 
 input[type="text"] {
-  width: 270px;
-  margin-left: 41%;
+  width: 250px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-bottom: 5px;
 }
 
 label {
@@ -14,65 +17,26 @@ label {
   text-align: center;
 }
 
-#searchButton:hover,
-#download:hover,
-#classAdd:hover,
-#classRemove:hover,
-#logOut:hover,
-#upload:hover {
+button:hover {
   background-color: maroon;
   transition: 0.5s;
 }
 
-#searchButton,
-#download,
-#classAdd,
-#classRemove,
-#logOut,
-#upload {
+button:focus {
+  background-color: maroon;
+}
+
+button {
   background-color: #000000;
   border: none;
-  width: 270px;
+  width: 250px;
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
   margin-top: 5px;
-  margin-left: 41%;
-}
-
-.schedule {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  margin-top: 50px;
-  min-height: 300px;
-}
-
-.col {
-  border-right: 1px solid black;
-}
-
-.col:nth-child(1) {
-  border-left: 1px solid black;
-}
-
-.col_title{
-    display: flex;
-    justify-content: center;
-    border-bottom:  1px solid black;
-}
-
-.col_schedule{
-    padding: 15px;
-}
-
-.class_info{
-    display: block;
-    margin:15px 0;
-    border-radius: 15px;
-    background-color: aquamarine;
-    padding: 10px;
 }

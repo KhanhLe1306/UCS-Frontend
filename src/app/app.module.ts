@@ -17,6 +17,8 @@ import { RemoveClassComponent } from './components/remove-class/remove-class.com
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AddInstructorComponent } from './components/add-instructor/add-instructor.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     RemoveClassComponent,
     SearchResultsComponent,
     AvailableSlotsComponent,
+    AddInstructorComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

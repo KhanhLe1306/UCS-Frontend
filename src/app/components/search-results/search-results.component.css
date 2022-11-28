@@ -1,35 +1,125 @@
-div { 
-    width:300px; 
-    height:300px; 
-    background-color:#F5F2F2; 
-    border:3px solid black; 
-    margin-left: 40%;
-    border-radius: 10px;
-} 
-
-h1, p {
-    text-align: center;
+h1,
+p {
+  text-align: center;
 }
 
-#searchResult {
-    margin-top: 40%;
+.dashSearch {
+  margin-top: 30px;
+}
+input[type="text"] {
+  width: 250px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-bottom: 5px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
 }
 
-button {
-    background-color: #000000;
-    border: none;
-    width: 270px;
-    border-radius: 10px;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 5px;
-    margin-left: 41%;
+label {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #989795;
 }
 
 button:hover {
-    background-color:maroon;
-    transition: 0.5s;
+  background-color: maroon;
+  transition: 0.5s;
+}
+
+button:focus {
+  background-color: maroon;
+}
+
+
+button {
+  background-color: #000000;
+  border: none;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: 5px;
+}
+
+.class_info {
+  color: white;
+}
+
+.schedule {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 50px;
+  min-height: 300px;
+}
+
+.col {
+  border-right: 2px solid #989795;
+}
+
+.col:nth-child(1) {
+  border-left: 2px solid #989795;
+}
+
+.col_title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #989795;
+  font-size: 24px;
+  font-weight: bold;
+  color: #989795;
+}
+
+.col_schedule {
+  padding: 15px;
+}
+
+.class_info {
+  font-size: 0.70em;
+  display: block;
+  margin: 15px 0;
+  border-radius: 15px;
+  background-color: aquamarine;
+  padding: 10px;
+  min-height: 120px;
+  cursor: pointer;
+}
+
+.course__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-col.col_title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #989795;
+  font-size: 24px;
+  font-weight: bold;
+  color: #989795;
+}
+
+.time-col {
+  border-right: 2px solid #989795;
+  width: 5.5rem;
+}
+
+.time-col.col_title {
+  padding-right: 10px;;
+}
+
+.time-item {
+  display: flex;
+  justify-content: center;
 }

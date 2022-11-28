@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { stringify } from 'querystring';
 import { RoomService } from 'src/app/services/room.service';
 
 @Component({
@@ -52,10 +51,6 @@ export class DashboardComponent implements OnInit {
           console.log(this.roomSchedule);
         }
       });
-  }
-
-  dashSearch() {
-    console.log('Searching...');
   }
 
   ngOnInit(): void {
