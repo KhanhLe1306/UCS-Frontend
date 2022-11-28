@@ -67,4 +67,9 @@ export class SearchResultsComponent implements OnInit {
     ];
   }
 
+  showModal(scheduleClass: any) {
+    this.modalService.showModal = true;
+    this.modalService.scheduleClass = scheduleClass;
+  }
+
 }
