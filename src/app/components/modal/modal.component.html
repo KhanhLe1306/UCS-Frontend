@@ -1,0 +1,21 @@
+<div class="modal-header bg-info">
+  <h4 class="modal-title">{{ data.clssID }} - {{ data.courseTitle }}</h4>
+  <ng-container *ngIf="data.crossListedWith">
+    {{ data.crossListedWith }}</ng-container
+  >
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <input [(ngModel)]="startTime">
+  <input [(ngModel)]="endTime">
+</div>
+<div class="modal-footer bg-info">
+  <button (click)="onSaveChanges()">Save Changes</button>
+</div>

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { stringify } from 'querystring';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { RoomService } from 'src/app/services/room.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
-  styleUrls: ['./search-results.component.css']
+  styleUrls: ['./search-results.component.css'],
 })
 export class SearchResultsComponent implements OnInit {
   roomSchedule: any = {};
@@ -28,11 +29,14 @@ export class SearchResultsComponent implements OnInit {
   ];
   iterator: number;
   testRoomSchedule: any;
-  searchForm = new FormGroup({
-    inputValue: new FormControl(''),
+  searchForm = new UntypedFormGroup({
+    inputValue: new UntypedFormControl(''),
   });
 
-  constructor(private roomService: RoomService) {
+  constructor(
+    private roomService: RoomService,
+    private modalService: NgbModal
+  ) {
     const searchButton = document.getElementById('searchButton');
     searchButton?.addEventListener('click', this.onSubmit);
   }
@@ -67,4 +71,9 @@ export class SearchResultsComponent implements OnInit {
     ];
   }
 
+  openModal(i: any) {
+    console.log(i);
+    const modalRef = this.modalService.open(ModalComponent);
+    modalRef.componentInstance.data = i;
+  }
 }
