@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
-import { stringify } from 'querystring';
 import { RoomService } from 'src/app/services/room.service';
 
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
-  styleUrls: ['./search-results.component.css']
+  styleUrls: ['./search-results.component.css'],
 })
 export class SearchResultsComponent implements OnInit {
   roomSchedule: any = {};
@@ -66,5 +65,4 @@ export class SearchResultsComponent implements OnInit {
       },
     ];
   }
-
 }
