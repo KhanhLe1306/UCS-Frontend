@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { stringify } from 'querystring';
 import { RoomService } from 'src/app/services/room.service';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-search-results',
@@ -32,7 +32,7 @@ export class SearchResultsComponent implements OnInit {
     inputValue: new FormControl(''),
   });
 
-  constructor(private roomService: RoomService) {
+  constructor(private roomService: RoomService, public modalService: ModalService) {
     const searchButton = document.getElementById('searchButton');
     searchButton?.addEventListener('click', this.onSubmit);
   }

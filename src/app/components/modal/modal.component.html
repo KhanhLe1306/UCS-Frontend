@@ -1,0 +1,10 @@
+<div class="overlay" (click)="modalService.showModal = false"></div>
+<div class="modal-container">
+  Modal is here
+  <div class="modal-buttons">
+    <span (click)="modalService.showModal = false" class="modal-cancel"
+      >Cancel</span
+    >
+    <span class="modal-saveChanges">Save Changes</span>
+  </div>
+</div>
