@@ -18,6 +18,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { AvailableSlotsComponent } from './components/available-slots/available-slots.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddInstructorComponent } from './components/add-instructor/add-instructor.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AddInstructorComponent } from './components/add-instructor/add-instruct
     AngularFileUploaderModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    NgbModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],

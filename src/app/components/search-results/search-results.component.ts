@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { RoomService } from 'src/app/services/room.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-search-results',
@@ -31,7 +33,10 @@ export class SearchResultsComponent implements OnInit {
     inputValue: new UntypedFormControl(''),
   });
 
-  constructor(private roomService: RoomService) {
+  constructor(
+    private roomService: RoomService,
+    private modalService: NgbModal
+  ) {
     const searchButton = document.getElementById('searchButton');
     searchButton?.addEventListener('click', this.onSubmit);
   }
@@ -64,5 +69,11 @@ export class SearchResultsComponent implements OnInit {
         startTime: '1730',
       },
     ];
+  }
+
+  openModal(i: any) {
+    console.log(i);
+    const modalRef = this.modalService.open(ModalComponent);
+    modalRef.componentInstance.data = i;
   }
 }

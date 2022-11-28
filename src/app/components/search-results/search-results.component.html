@@ -19,9 +19,16 @@
     <div class="time-col">
       <div class="col_title">TIME</div>
       <div class="col_schedule">
-      <ng-container *ngFor="let i of [900, 930, 1000, 1030, 1100, 1130, 1200, 1230, 1300, 1330, 1400, 1430, 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830]">
+        <ng-container
+          *ngFor="
+            let i of [
+              900, 930, 1000, 1030, 1100, 1130, 1200, 1230, 1300, 1330, 1400,
+              1430, 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830
+            ]
+          "
+        >
           <div class="time-item" style="height: 45px">{{ i }}</div>
-      </ng-container>
+        </ng-container>
       </div>
     </div>
     <div class="col">
@@ -29,9 +36,13 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Monday')">
-            <div class="class_info" [style.background-color]="i.color"
-            [style.marginTop.px]="i.priorCourseInfo['Monday']['marginSize']"
-            [style.height.px]="i.priorCourseInfo['Monday']['height']">
+            <div
+              class="class_info"
+              (click)="openModal(i)"
+              [style.background-color]="i.color"
+              [style.marginTop.px]="i.priorCourseInfo['Monday']['marginSize']"
+              [style.height.px]="i.priorCourseInfo['Monday']['height']"
+            >
               <div class="course__title">
                 <div>{{ i.course }}</div>
                 <ng-container *ngIf="i.crossListedWith != null">
@@ -50,9 +61,13 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Tuesday')">
-            <div class="class_info" [style.background-color]="i.color"
-            [style.marginTop.px]="i.priorCourseInfo['Tuesday']['marginSize']"
-            [style.height.px]="i.priorCourseInfo['Tuesday']['height']">
+            <div
+              class="class_info"
+              (click)="openModal(i)"
+              [style.background-color]="i.color"
+              [style.marginTop.px]="i.priorCourseInfo['Tuesday']['marginSize']"
+              [style.height.px]="i.priorCourseInfo['Tuesday']['height']"
+            >
               <div class="course__title">
                 <div>{{ i.course }}</div>
                 <ng-container *ngIf="i.crossListedWith != null">
@@ -71,9 +86,15 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Wednesday')">
-            <div class="class_info" [style.background-color]="i.color"
-            [style.marginTop.px]="i.priorCourseInfo['Wednesday']['marginSize']"
-            [style.height.px]="i.priorCourseInfo['Wednesday']['height']">
+            <div
+              class="class_info"
+              (click)="openModal(i)"
+              [style.background-color]="i.color"
+              [style.marginTop.px]="
+                i.priorCourseInfo['Wednesday']['marginSize']
+              "
+              [style.height.px]="i.priorCourseInfo['Wednesday']['height']"
+            >
               <div class="course__title">
                 <div>{{ i.course }}</div>
                 <ng-container *ngIf="i.crossListedWith != null">
@@ -92,9 +113,13 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Thursday')">
-            <div class="class_info" [style.background-color]="i.color"
-            [style.marginTop.px]="i.priorCourseInfo['Thursday']['marginSize']"
-            [style.height.px]="i.priorCourseInfo['Thursday']['height']">
+            <div
+              class="class_info"
+              (click)="openModal(i)"
+              [style.background-color]="i.color"
+              [style.marginTop.px]="i.priorCourseInfo['Thursday']['marginSize']"
+              [style.height.px]="i.priorCourseInfo['Thursday']['height']"
+            >
               <div class="course__title">
                 <div>{{ i.course }}</div>
                 <ng-container *ngIf="i.crossListedWith != null">
@@ -113,9 +138,13 @@
       <div class="col_schedule">
         <ng-container *ngFor="let i of roomSchedule">
           <ng-container *ngIf="i.meetingDays.includes('Friday')">
-            <div class="class_info" [style.background-color]="i.color"
-            [style.marginTop.px]="i.priorCourseInfo['Friday']['marginSize']"
-            [style.height.px]="i.priorCourseInfo['Friday']['height']">
+            <div
+              class="class_info"
+              (click)="openModal(i)"
+              [style.background-color]="i.color"
+              [style.marginTop.px]="i.priorCourseInfo['Friday']['marginSize']"
+              [style.height.px]="i.priorCourseInfo['Friday']['height']"
+            >
               <div class="course__title">
                 <div>{{ i.course }}</div>
                 <ng-container *ngIf="i.crossListedWith != null">
