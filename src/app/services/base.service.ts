@@ -31,7 +31,6 @@ export class BaseService {
     if (method == 'DELETE') {
       return this.httpClient.delete<any>(URL);
     }
-
     return this.httpClient.post<any>(URL, body);
   }
 }

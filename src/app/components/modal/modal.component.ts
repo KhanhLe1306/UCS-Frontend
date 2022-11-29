@@ -32,6 +32,18 @@ export class ModalComponent implements OnInit {
 
   onSave() {
     this.modalService.showModal = false;
-    console.log(this.editForm.value);
+    //console.log(this.editForm.value);
+    const body = {
+      Cls: 'xxx',
+      Section: 'aaa',
+      Instructor: 'bbb',
+      ClassSize: 'ccc',
+      ClassTime: 'ddd',
+      RoomCode: 'fff',
+      Room: 'ccc',
+      Days: 'xxx',
+    };
+
+    this.modalService.addClass(body).subscribe((res) => console.log(res));
   }
 }
