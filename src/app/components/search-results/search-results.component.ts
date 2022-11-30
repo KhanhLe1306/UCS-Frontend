@@ -26,6 +26,8 @@ export class SearchResultsComponent implements OnInit {
     '#f03584',
     '#5527f2',
   ];
+  times = [900, 930, 1000, 1030, 1100, 1130, 1200, 1230, 1300, 1330, 1400, 1430, 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900, 1930, 2000, 2030, 2100, 2130, 2200];
+  timesUpdated;
   iterator: number;
   testRoomSchedule: any;
   searchForm = new FormGroup({
@@ -49,6 +51,8 @@ export class SearchResultsComponent implements OnInit {
             e.color = this.backgroundColor[this.iterator++];
           });
           this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+          this.roomSchedule[0].startTime;
+          this.timesUpdated = this.times.filter(x => x >= this.roomSchedule[0].startTime);
           console.log(this.roomSchedule);
         }
       });
