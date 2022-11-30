@@ -11,21 +11,18 @@ import { ModalService } from 'src/app/services/modal.service';
 export class SearchResultsComponent implements OnInit {
   roomSchedule: any = {};
   backgroundColor = [
-    '#a9c937',
-    '#24c6c7',
-    '#0a844e',
-    '#a312f3',
-    '#476ff4',
-    '#82eaca',
-    '#c3a737',
-    '#cd740a',
-    '#f174ec',
-    '#a32ff9',
-    '#807787',
-    '#3c96c8',
-    '#f03584',
-    '#5527f2',
-  ];
+    '#8B0000',
+    '#FF0000',
+    '#FF4500',
+    '#FF8C00',
+    '#556B2F',
+    '#2E8B57',
+    '#5F9EA0',
+    '#191970',
+    '#0000FF',
+    '#8B008B',
+    '#708090',
+  ].sort(() => Math.random() - 0.5);
   times = ['800', '830', '900', '930', '1000', '1030', '1100', '1130', '1200', '1230', '1300', '1330', '1400', '1430', '1500', '1530', '1600', '1630', '1700', '1730', '1800', '1830', '1900', '1930', '2000', '2030', '2100', '2130', '2200'];
   timesUpdated;
   iterator: number;

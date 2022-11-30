@@ -86,7 +86,7 @@ button {
 }
 
 .class_info {
-  font-size: 0.70em;
+  font-size: 0.8em;
   display: block;
   margin: 0px 15px;
   border-radius: 15px;
@@ -122,3 +122,4 @@ button {
   display: flex;
   justify-content: center;
 }
+
