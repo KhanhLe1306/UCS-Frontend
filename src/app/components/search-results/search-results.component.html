@@ -22,7 +22,7 @@
       <div class="col_title">TIME</div>
       <div class="col_schedule">
       <ng-container *ngFor="let i of timesUpdated">
-          <div class="time-item" style="height: 45px; margin: 0px">{{ i }}</div>
+          <div class="time-item" style="height: 52.5px; margin: 0px">{{ i }}</div>
       </ng-container>
       </div>
     </div>
@@ -152,22 +152,22 @@
 </div>
 <div>
   <button
-    id="removeClass"
-    type="button"
-    class="btn btn-success"
-    [routerLink]="'/removeClass'"
-  >
-    Remove Class
-  </button>
-</div>
-<div>
-  <button
     id="addInstructor"
     type="button"
     class="btn btn-success"
     [routerLink]="'/addInstructor'"
   >
     Add Instructor
+  </button>
+</div>
+<div>
+  <button
+    id="removeClass"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/removeClass'"
+  >
+    Remove Class
   </button>
 </div>
 <div>
