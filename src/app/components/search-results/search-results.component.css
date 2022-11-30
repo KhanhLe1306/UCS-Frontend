@@ -61,7 +61,6 @@ button {
   margin: 0 auto;
   display: flex;
   margin-top: 50px;
-  min-height: 300px;
 }
 
 .col {
@@ -79,20 +78,20 @@ button {
   font-size: 24px;
   font-weight: bold;
   color: #989795;
+  margin-bottom: 15px;
 }
 
 .col_schedule {
-  padding: 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .class_info {
   font-size: 0.70em;
   display: block;
-  margin: 15px 0;
+  margin: 0px 15px;
   border-radius: 15px;
   background-color: aquamarine;
   padding: 10px;
-  min-height: 120px;
   cursor: pointer;
 }
 

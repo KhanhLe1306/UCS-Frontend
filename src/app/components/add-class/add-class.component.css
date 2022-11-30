@@ -11,13 +11,13 @@ input[type="text"] {
 }
 
 .dowPicker {
-    width: 300px;
+    width: 100vw;
     margin: 0 auto;
     text-align: center;
 }
 .dowPickerOption {
     display: inline-block;
-    
+    user-select: none;
 }
 input[type=checkbox] {
     display: none;
@@ -26,6 +26,8 @@ label {
     font-size: 50px;
     color: #A7A7A7;
     cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
 }
 input[type=checkbox]:checked ~ label {
     color: green;
