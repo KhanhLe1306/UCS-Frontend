@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { RoomService } from 'src/app/services/room.service';
+import { SearchService } from 'src/app/services/search.service';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -31,17 +31,18 @@ export class SearchResultsComponent implements OnInit {
     inputValue: new FormControl(''),
   });
 
-  constructor(private roomService: RoomService, public modalService: ModalService) {
+  constructor(private searchService: SearchService, public modalService: ModalService) {
     const searchButton = document.getElementById('searchButton');
     searchButton?.addEventListener('click', this.onSubmit);
   }
 
   onSubmit() {
-    console.log('Onsubmit works!');
+    const input = this.searchForm.value.inputValue;
     this.iterator = 0;
-    console.log(this.searchForm.value.inputValue);
-    this.roomService
-      .getScheduleByRoomNumber(this.searchForm.value.inputValue)
+    if (input.length > 3) {
+      const names = input.split(' ')
+      this.searchService
+      .getScheduleByInstructor(names[0], names[1])
       .subscribe((res) => {
         if (res.length != 0) {
           res.forEach((e) => {
@@ -54,6 +55,22 @@ export class SearchResultsComponent implements OnInit {
           console.log(this.roomSchedule);
         }
       });
+    } else {
+    this.searchService
+      .getScheduleByRoomNumber(input)
+      .subscribe((res) => {
+        if (res.length != 0) {
+          res.forEach((e) => {
+            e.color = this.backgroundColor[this.iterator++];
+          });
+          this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+          this.roomSchedule[0].startTime;
+          this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
+          this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= this.roomSchedule[this.roomSchedule.length-1].endTime);
+          console.log(this.roomSchedule);
+        }
+      });
+    }
   }
 
   ngOnInit(): void {

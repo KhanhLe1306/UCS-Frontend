@@ -14,7 +14,7 @@ import { AddInstructorComponent } from './components/add-instructor/add-instruct
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'success', component: SuccessComponent },
+  { path: 'success', component: SuccessComponent, pathMatch: 'prefix' },
   { path: 'addClass', component: AddClassComponent},
   { path: 'availableSlots', component: AvailableSlotsComponent},
   { path: 'dashboard', component: DashboardComponent},
@@ -30,4 +30,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  routes = routes;
+}
