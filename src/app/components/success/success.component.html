@@ -1,6 +1,37 @@
-<div>
-    <h1>SUCCESS!</h1>
-    <br>
-    <img src="../assets/images/check.png" alt="Green check mark">
+<div id="success-messages">
+    <div id="success" *ngIf="selectedMessage['success'] else failure">
+        <div id="hero">
+            <h1 id="title">SUCCESS</h1>
+            <div id="image">
+                <img src="../assets/images/check.png" alt="Green check mark">
+            </div>
+        </div>
+        <div id="information">
+            <h2 id="summary">SUMMARY</h2>
+            <div id="success-information-container" *ngFor="let item of selectedMessage['messages']">
+                <p>Instructor: {{ item['header'] }}</p>
+                <p>Room: {{ item['message-primary'] }}</p>
+                <p>Time: {{ item['message-secondary'].split(',')[0] }}</p>
+                <p>Days: {{ item['message-secondary'].split(',')[1] }}</p>
+            </div>
+        </div>
+    </div>
+
+    <ng-template id="success" #failure>
+        <div id="hero">
+            <h1 id="title">Failure</h1>
+            <div id="image">
+                <img src="../assets/images/x.png" alt="Red X Symbol">
+            </div>
+        </div>
+        <div id="information">
+            <h2 id="summary">SUMMARY</h2>
+            <div id="fail-information-container" *ngFor="let item of selectedMessage['messages']">
+                <p id="fail-header">Conflict: {{ item['header'] }}</p>
+                <p>{{ item['message-primary'] }}</p>
+                <p>{{ item['message-secondary'].split(',')[0] }}</p>
+            </div>
+        </div>
+    </ng-template>
     <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
 </div>

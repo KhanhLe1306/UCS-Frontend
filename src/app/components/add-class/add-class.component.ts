@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AddService } from 'src/app/services/add-class.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { SharedDataService } from 'src/app/services/shared.service';
+
 
 @Component({
   selector: 'app-add-class',
@@ -11,6 +13,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class AddClassComponent implements OnInit {
 
   results = {};
+  selectedMessage:any;
   addClassForm = new FormGroup({
     courseNum: new FormControl(''),
     section: new FormControl(''),
@@ -28,7 +31,7 @@ export class AddClassComponent implements OnInit {
     sat: new FormControl(''),
   });
 
-  constructor(private addService: AddService) {
+  constructor(private addService: AddService, private sharedDataService: SharedDataService, private router: Router) {
     const addButton = document.getElementById('home');
     addButton?.addEventListener('click', this.onSubmit);
   }
@@ -38,35 +41,25 @@ export class AddClassComponent implements OnInit {
 
 
   onSubmit() {
-    let days = "";
+    let days = [];
     if (this.addClassForm.value.mon) {
-      days += "Monday";
+      days.push('Monday');
     }
     if (this.addClassForm.value.tue) {
-      if (days.length != 0) {
-        days += ",Tuesday";
-      } else {
-        days += "Tuesday";
-      }
+      days.push('Tuesday');
     }
     if (this.addClassForm.value.wed) {
-      if (days.length != 0) {
-        days += ",Wednesday";
-      } else {
-        days += "Wednesday";
-      }
+      days.push('Wednesday');
     }
     if (this.addClassForm.value.thu) {
-      if (days.length != 0) {
-        days += ",Thursday";
-      } else {
-        days += "Thursday";
-      }
+      days.push('Thursday');
     }
     if (this.addClassForm.value.fri) {
-      days += "Tuesday";
+      days.push('Friday');
     }
-    console.log(days);
+
+    let daysjoin = days.join(',');
+    console.log(daysjoin);
     this.addService.addClass({
       'cls': this.addClassForm.value.courseNum,
       'section': this.addClassForm.value.section,
@@ -76,9 +69,10 @@ export class AddClassComponent implements OnInit {
       'classEnd': this.addClassForm.value.classEnd,
       'roomCode': this.addClassForm.value.roomCode,
       'room': this.addClassForm.value.room,
-      'days': days
+      'days': daysjoin
     }).subscribe((res) => {
-      console.log(res);
+      this.sharedDataService.changeMessage(JSON.stringify(res));
+      this.router.navigate(['/success']);
     });
     console.log("OnSubmit Works! -> AddClass");
   };

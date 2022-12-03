@@ -34,9 +34,9 @@ input[type=checkbox]:checked ~ label {
     font-weight: 500;
 }
 
-button {
+.btn {
     background-color: #000000;
-    border: none;
+    border: 2px solid black;
     width: 250px;
     border-radius: 10px;
     text-align: center;
@@ -50,15 +50,18 @@ button {
 }
 
 button:hover {
-    background-color:maroon;
+    background-color:white;
+    border: 2px solid #b60000;
+    color: #b60000;
     transition: 0.5s;
-}
-
-button:focus {
-    background-color: maroon;
 }
 
 .form-buttons {
     display: flex;
     flex-direction: column;
 }
+
+button #submitButton {
+    background-color: black;
+}
+

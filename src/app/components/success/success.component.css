@@ -1,44 +1,100 @@
-div { 
-    width:300px; 
-    height:300px; 
-    background-color:#F5F2F2; 
-    border:3px solid black; 
-    margin: auto;
-    border-radius: 10px;
-  } 
-
-h1 {
-    text-align: center;
+#success-messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-button {
-    background-color: #000000;
-    border: none;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    position: relative;
-    left: 50%;
-    margin-left: -125px;
-    margin-top: 15px;
+#success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-button:hover {
-    background-color: maroon;
-    transition: 0.5s;
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
 }
 
-button:focus {
-    background-color: maroon;
+#sucess #title {
+    margin: 10px;
+}
+
+#success #image img {
+    width: 3rem;
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
+    width: 3rem;
+}
+
+#image {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+#summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+}
+
+#information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 500px;
+    margin-bottom: 20px;
+}
+
+#success-information-container, #fail-information-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#success-information-container p, #fail-information-container p {
+    font-size: 1.5rem;
+}
+
+#goHome {
+    border-radius: 10px;
+    background: black;
+    transition: ease 0.5s all;
+    border: 2px solid white;
+    font-size: x-large;
+    margin-bottom: 200px;
+}
+
+#goHome:hover {
+    background: white;
+    color:#b60000;
+    border: 2px solid #b60000;
+}
+
+#fail-header {
+    font-weight: bold;
 }
