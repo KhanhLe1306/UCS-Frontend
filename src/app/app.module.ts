@@ -29,12 +29,12 @@ import { ModalComponent } from './components/modal/modal.component';
     LoginComponent,
     DashboardComponent,
     SuccessComponent,
-    AddClassComponent,
     RemoveClassComponent,
     SearchResultsComponent,
     AvailableSlotsComponent,
     AddInstructorComponent,
     ModalComponent,
+    AddClassComponent,
   ],
   imports: [
     BrowserModule,

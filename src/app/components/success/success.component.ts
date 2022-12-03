@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SharedDataService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-success',
@@ -7,9 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SuccessComponent implements OnInit {
   
-  constructor() { }
+  selectedMessage: any;
+
+  constructor(private sharedDataService: SharedDataService) { }
 
   ngOnInit(): void {
+    this.sharedDataService.currentMessage.subscribe((message) => {
+      console.log(JSON.parse(message));
+      this.selectedMessage = JSON.parse(message);
+    });
   }
-
 }

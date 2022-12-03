@@ -7,15 +7,23 @@ p {
   margin-top: 30px;
 }
 input[type="text"] {
-  width: 250px;
+  width: 254px;
   position: relative;
   left: 50%;
   margin-left: -125px;
   margin-bottom: 5px;
-  border: none;
+  border: 2px solid #989795;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: transparent;
+  outline: none;
+  transition: ease all 0.5s;
+  font-size: medium;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #b60000;
 }
 
 label {
@@ -28,24 +36,21 @@ label {
 }
 
 button:hover {
-  background-color: maroon;
-  transition: 0.5s;
+  background-color: white;
+  transition: ease all 0.5s;
+  border: 2px solid #b60000;
+  color: #b60000;
 }
-
-button:focus {
-  background-color: maroon;
-}
-
 
 button {
   background-color: #000000;
-  border: none;
-  width: 250px;
+  border: 2px solid white;
+  width: 254px;
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.5rem;
   position: relative;
   left: 50%;
   margin-left: -125px;
@@ -121,5 +126,7 @@ button {
 .time-item {
   display: flex;
   justify-content: center;
+  color: #989795;
+  font-weight: bold;
 }
 

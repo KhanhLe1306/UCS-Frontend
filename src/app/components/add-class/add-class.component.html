@@ -67,10 +67,8 @@
                 <label for="dow6">S</label>
             </div>
         </div>
-        <div>
-            <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success">Submit</button>
-        </div>
         <div class="form-buttons">
+            <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success">Submit</button>
             <button id="home" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
             <button id="search" type="button" class="btn btn-success" [routerLink]="'/results'">Search</button>
         </div>
