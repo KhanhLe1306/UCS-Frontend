@@ -8,16 +8,22 @@
   </div>
   <div>{{ scheduleClass.courseTitle }}</div>
   <div [formGroup]="editForm">
+
+    <div class="labels">
+      <p>Start Time:</p>
+      <p>End Time:</p>
+      <p>Meeting Days</p>
+    </div>
     <div>
-      <label for="startTime">StartTime: </label>
+      <label id="start" for="startTime">StartTime: </label>
       <input type="text" formControlName="startTime" id="startTime" />
     </div>
     <div>
-      <label for="endTime">EndTime</label>
+      <label id="end" for="endTime">EndTime</label>
       <input type="text" formControlName="endTime" id=" startTime" />
     </div>
     <div>
-      <label for="meetingDays">MeetingDays</label>
+      <label id="days" for="meetingDays">MeetingDays</label>
       <input type="text" formControlName="meetingDays" id="meetingDays" />
     </div>
   </div>

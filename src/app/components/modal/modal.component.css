@@ -54,3 +54,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+#start {
+    font-size: large;
+    font-weight: bold;
+    margin-right: 10px;
+}
