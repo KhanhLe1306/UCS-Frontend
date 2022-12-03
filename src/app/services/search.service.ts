@@ -7,7 +7,7 @@ import { BaseService } from './base.service';
 @Injectable({
   providedIn: 'root',
 })
-export class RoomService extends BaseService {
+export class SearchService extends BaseService {
   constructor(public httpClient: HttpClient) {
     super(httpClient);
   }
@@ -15,10 +15,17 @@ export class RoomService extends BaseService {
   routes = {
     GetScheduleByRoomNumber: (roomNumber: string) =>
       `room/getScheduleByRoomNumber/${roomNumber}`,
+    GetScheduleByInstructor: (firstName: string, lastName: string) =>
+      `instructor/getScheduleByInstructor/${firstName}/${lastName}`
   };
 
   getScheduleByRoomNumber(roomNumber: string): Observable<any[]> {
     const url = this.routes.GetScheduleByRoomNumber(roomNumber);
     return this.sendRequest({ url: url, method: 'GET' });
+  }
+
+  getScheduleByInstructor(firstName: string, lastName: string): Observable<any[]> {
+      const url = this.routes.GetScheduleByInstructor(firstName, lastName);
+      return this.sendRequest({ url: url, method: 'GET' });
   }
 }

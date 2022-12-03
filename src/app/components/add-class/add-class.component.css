@@ -56,4 +56,9 @@ button:hover {
 
 button:focus {
     background-color: maroon;
-  }
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+}
