@@ -4,14 +4,31 @@ p {
 }
 
 .dashSearch {
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.form-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #989795;
+}
+
 input[type="text"] {
-  width: 254px;
-  position: relative;
-  left: 50%;
-  margin-left: -125px;
-  margin-bottom: 5px;
+  width: 300px;
   border: 2px solid #989795;
   padding: 10px;
   border-radius: 10px;
@@ -23,38 +40,38 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border: 2px solid #b60000;
+  border: 2px solid black;
 }
 
 label {
   display: inline-block;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
-  color: #989795;
+  color: black;
 }
 
 button:hover {
   background-color: white;
   transition: ease all 0.5s;
-  border: 2px solid #b60000;
+  border: 4px solid #b60000;
   color: #b60000;
 }
 
 button {
   background-color: #000000;
-  border: 2px solid white;
+  border: 4px solid black;
   width: 254px;
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
-  position: relative;
-  left: 50%;
-  margin-left: -125px;
-  margin-top: 5px;
+  margin: 10px;
+  font-weight: bold;
 }
 
 .class_info {
@@ -66,6 +83,7 @@ button {
   margin: 0 auto;
   display: flex;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .col {
@@ -130,3 +148,80 @@ button {
   font-weight: bold;
 }
 
+.course {
+  font-weight: bold;
+}
+
+.other-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-form {
+  display: flex;
+}
+
+.btn.btn-search {
+  width: 100px;
+  font-size: medium;
+  padding: 10px;
+  margin: 0 0 0 10px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid black;
+  transition: 0.5s ease all;
+  font-weight: bold;
+}
+
+.btn.btn-search:hover {
+  color:#b60000;
+  border: 2px solid #b60000;
+
+}
+
+.navv {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #b60000;
+}
+
+.nav__links {
+  display: flex;
+}
+
+#goHome, #about {
+  font-size: larger;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 15px;
+  margin: 0 0 0 5px;
+  background-color: #b60000;
+  border: 2px solid #b60000;
+  width: fit-content;
+}
+
+#goHome:hover, #about:hover {
+  border: 2px solid white;
+  color: white;
+}
+
+.logo {
+  margin-left: 20px;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+  margin-right: 25px;
+}
+
+.logo span {
+  color: black;
+}
+
+.results-main {
+  padding-top: 50px;
+}

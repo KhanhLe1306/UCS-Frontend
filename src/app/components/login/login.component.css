@@ -1,32 +1,37 @@
-h1 {
+h1,
+p {
     text-align: center;
 }
 
 input[type="text"] {
     width: 250px;
     position: relative;
-    left: 50%;
-    margin-left: -125px;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
+
 input[type="password"] {
     width: 250px;
     position: relative;
-    left: 50%;
-    margin-left: -125px;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 label {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+    font-size: 50px;
+    color: #989795;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+  }
+
+button:hover {
+    background-color: white;
+    border: 2px solid #b60000;
+    color: #b60000;
 }
 
-#submitButton,
-#signUpButton {
+button {
     background-color: #000000;
-    border: none;
+    border: 2px solid black;
     width: 250px;
     border-radius: 10px;
     text-align: center;
@@ -34,16 +39,140 @@ label {
     display: inline-block;
     font-size: 16px;
     position: relative;
-    left: 50%;
-    margin-left: -125px;
     margin-top: 5px;
+    transition: ease all 0.5s;
 }
 
-#signUpButton:hover, #submitButton:hover {
-    background-color:maroon;
-    transition: 0.5s;
+
+#submitButton,
+#signUpButton {
+    background-color: #000000;
+    border: 4px solid black;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    margin-top: 5px;
+    transition: ease all 0.5s;
+    font-weight: bold;
 }
+
+#submitButton:hover,
+#signUpButton:hover {
+    background-color: white;
+    border: 4px solid #b60000;
+    color: #b60000;
+}
+
 
 button:focus {
     background-color: maroon;
+}
+
+.navv {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #b60000;
+}
+
+.nav__links {
+    display: flex;
+}
+
+#goHome,
+#about {
+    font-size: larger;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #b60000;
+    border: 2px solid #b60000;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+#goHome:hover,
+#about:hover {
+    border: 2px solid white;
+    background-color: #b60000;
+    color: white;
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    margin-right: 25px;
+}
+
+.logo span {
+    color: black;
+}
+
+.header h1 {
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 20rem;
+    position: relative;
+    margin-bottom: 5px;
+    outline: none;
+    border: 2px solid #989795;
+    border-radius: 10px;
+    font-size: larger;
+    transition: 0.5s ease all;
+    padding: 5px;
+}
+
+.text-inputs {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 4px solid #989795;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+#text-label {
+    font-size: x-large;
+    color: black;
+    width: 150px;
+    font-weight: bold;
+  }
+
+  .input-texts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }

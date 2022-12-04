@@ -54,7 +54,7 @@ img {
     width: 100%;
     font-size: 2.5rem;
     font-weight: 600;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid black;
 }
 
 #information {
@@ -62,13 +62,14 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 10px;
     min-width: 500px;
     margin-bottom: 20px;
 }
 
-#success-information-container, #fail-information-container {
+#success-information-container,
+#fail-information-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,25 +77,76 @@ img {
     padding: 10px;
 }
 
-#success-information-container p, #fail-information-container p {
+#success-information-container p,
+#fail-information-container p {
     font-size: 1.5rem;
-}
-
-#goHome {
-    border-radius: 10px;
-    background: black;
-    transition: ease 0.5s all;
-    border: 2px solid white;
-    font-size: x-large;
-    margin-bottom: 200px;
-}
-
-#goHome:hover {
-    background: white;
-    color:#b60000;
-    border: 2px solid #b60000;
 }
 
 #fail-header {
     font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fail-info {
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+#fail-information-container {
+    width: 100%;
+}
+
+.navv {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #b60000;
+}
+
+.nav__links {
+    display: flex;
+}
+
+#goHome,
+#about {
+    font-size: larger;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #b60000;
+    border: 2px solid #b60000;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+#goHome:hover,
+#about:hover {
+    border: 2px solid white;
+    background-color: #b60000;
+    color: white;
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    margin-right: 25px;
+}
+
+.logo span {
+    color: black;
+}
+
+#success-messages {
+    padding-top: 50px;
 }

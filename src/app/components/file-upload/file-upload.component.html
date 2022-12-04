@@ -1,11 +1,25 @@
-<link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-/>
-<div class="file-upload-container">
-  <angular-file-uploader [config]="afuConfig"> </angular-file-uploader>
+<div class="navv">
+  <div class="logo">
+    <span>PKI</span> Classroom Scheduler
+  </div>
+  <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+    Home
+  </button>
+  <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+    About
+  </button>
+  <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+    Other Options
+  </button>
 </div>
 
-<div>
-  <button id="home" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
+<div class="results-main">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <div class="file-upload-container">
+    <angular-file-uploader [config]="afuConfig"> </angular-file-uploader>
+  </div>
+
+  <div>
+    <button id="home" type="button" class="btn btn-success" [routerLink]="'/results'">Go Home</button>
+  </div>
 </div>

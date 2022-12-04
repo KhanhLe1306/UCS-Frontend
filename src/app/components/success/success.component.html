@@ -1,3 +1,18 @@
+<div class="navv">
+    <div class="logo">
+        <span>PKI</span> Classroom Scheduler
+    </div>
+    <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+        Home
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+        About
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+      Other Options
+    </button>
+  </div>
+
 <div id="success-messages">
     <div id="success" *ngIf="selectedMessage['success'] else failure">
         <div id="hero">
@@ -28,10 +43,11 @@
             <h2 id="summary">SUMMARY</h2>
             <div id="fail-information-container" *ngFor="let item of selectedMessage['messages']">
                 <p id="fail-header">Conflict: {{ item['header'] }}</p>
-                <p>{{ item['message-primary'] }}</p>
-                <p>{{ item['message-secondary'].split(',')[0] }}</p>
+                <div class="fail-info">
+                    <p>{{ item['message-primary'] }}</p>
+                    <p>{{ item['message-secondary'].split(',')[0] }}</p>
+                </div>
             </div>
         </div>
     </ng-template>
-    <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
 </div>

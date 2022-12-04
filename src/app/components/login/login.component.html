@@ -1,35 +1,35 @@
-<h1>Login</h1>
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-  <div class="login-group">
-    <label for="userName">Username: </label>
-    <input
-      type="text"
-      class="login-control"
-      id="userName"
-      required
-      [(ngModel)]="userName"
-      name="userName"
-    />
-    <div [hidden]="userName != null || userName != ''" class="alert alert-danger"></div>
+<div class="navv">
+  <div class="logo">
+    <span>PKI</span> Classroom Scheduler
   </div>
+</div>
 
-  <div class="login-group">
-    <label for="password">Password: </label>
-    <input
-      type="password"
-      class="login-control"
-      id="password"
-      required
-      [(ngModel)]="password"
-      name="password"
-    />
-    <div [hidden]="password != null || password != ''" class="alert alert-danger"></div>
+<div class="results-main">
+  <div class="header">
+    <h1>Login</h1>
   </div>
+  <form class="login-form" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="text-inputs">
+      <div class="login-group">
+        <label for="userName" id="text-label">Username</label>
+        <input type="text" class="login-control" id="userName" required [(ngModel)]="userName" name="userName" placeholder="Username" />
+        <div [hidden]="userName != null || userName != ''" class="alert alert-danger"></div>
+      </div>
 
-  <div>
-    <button id="submitButton" [disabled]="!loginForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/dashboard'">Log in</button>
-  </div>
-  <div>
-    <button id="signUpButton" type="submit" class="btn btn-success" [routerLink]="'/form'">Sign up</button>
-  </div>
+      <div class="login-group">
+        <label for="password" id="text-label">Password</label>
+        <input type="password" class="login-control" id="password" required [(ngModel)]="password" name="password" placeholder="Password"/>
+        <div [hidden]="password != null || password != ''" class="alert alert-danger"></div>
+      </div>
+    </div>
+    <div class="login-buttons">
+      <div>
+        <button id="submitButton" [disabled]="!loginForm.form.valid" type="submit" class="btn btn-success"
+          [routerLink]="'/results'">Log in</button>
+      </div>
+      <div>
+        <button id="signUpButton" type="submit" class="btn btn-success" [routerLink]="'/form'">Sign up</button>
+      </div>
+    </div>
   </form>
+</div>
