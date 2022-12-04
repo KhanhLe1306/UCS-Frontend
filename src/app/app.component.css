@@ -3,8 +3,8 @@ div {
     height: 50px;
     text-align: center;
     margin-bottom: 10px;
-    background-color: maroon;
+    background-color: #b60000;
     color: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    font-weight: 800;
+    box-shadow: 0 3px 3px -1px rgba(0,0,0,.4);
 }

@@ -1,42 +1,41 @@
-<h1>Add an Instructor</h1>
-<div>
-    <input 
-    type="text"
-    id="firstName"
-    placeholder="Instructor First Name"
-    />
-</div>
-<div>
-    <input 
-    type="text"
-    id="lastName"
-    placeholder="Instructor Last Name"
-    />
-</div>
-<div>
-    <input 
-    type="text"
-    id="employeeNumber"
-    placeholder="Instructor Employee Number"
-    />
-</div>
-<div>
-    <button 
-    id="submitInstructor"
-    type="submit"
-    class="btn btn-success"
-    placeholder="Submit Instructor"
-    [routerLink]="'/success'">
-    Submit New Instructor
+<div class="navv">
+    <div class="logo">
+        <span>PKI</span> Classroom Scheduler
+    </div>
+    <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+        Home
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+        About
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+        Other Options
     </button>
 </div>
-<div>
-    <button 
-    id="goHome"
-    type="button"
-    class="btn btn-success"
-    [routerLink]="'/dashboard'"
-    >
-    Go Home
-    </button>
+<div class="results-main">
+    <div class="header">
+        <h1>Add an Instructor</h1>
+    </div>
+    <div class="text-inputs">
+        <div>
+            <label id="text-label" for="firstName">First Name</label>
+            <input type="text" class="add-instructor" id="firstName" placeholder="Instructor First Name" />
+        </div>
+        <div>
+            <label id="text-label" for="lastName">Last Name</label>
+            <input type="text" class="add-instructor" id="lastName" placeholder="Instructor Last Name" />
+        </div>
+        <div>
+            <label id="text-label" for="employeeNumber">Employee Number</label>
+            <input type="text" class="add-instructor" id="employeeNumber" placeholder="Instructor Employee Number" />
+        </div>
+    </div>
+    <div class="instructor-buttons">
+        <div>
+            <button id="addButtom" type="submit" class="btn btn-success" [routerLink]="'/results'">Submit</button>
+        </div>
+        <div>
+            <button id="home" type="button" class="btn btn-success" [routerLink]="'/results'">Go Home</button>
+        </div>
+    </div>
 </div>

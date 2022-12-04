@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Individual } from 'src/app/Models/Individual';
 import { IndividualService } from 'src/app/services/individual.service';
-
+/**
+ * @param  {'app-login'} {selector
+ * @param  {'./login.component.html'} templateUrl
+ * @param  {['./login.component.css']} styleUrls
+ * @param  {} }
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

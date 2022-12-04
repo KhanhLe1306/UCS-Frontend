@@ -1,123 +1,103 @@
-<h1>Enter New Class Information</h1>
-<form (ngSubmit)="onSubmit()" #classForm="ngForm">
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="courseNum"
-            required
-            name="courseNum"
-            placeholder="Course Number"
-        />
+<div class="navv">
+    <div class="logo">
+        <span>PKI</span> Classroom Scheduler
     </div>
+    <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+        Home
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+        About
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+        Other Options
+    </button>
+</div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="sectionNum"
-            required
-            name="sectionNum"
-            placeholder="Seciton Number"
-        />
-    </div>
+<div class="results-main">
+    <h1>Enter New Class Information</h1>
+    <form class="add-class-form" (ngSubmit)="onSubmit()" #classForm="ngForm" [formGroup]="addClassForm">
+        <div class="addClassForm">
+            <div class="text-inputs">
+                <div class="add-group">
+                    <label id="text-label" for="courseNum">Course Number</label>
+                    <input type="text" class="class-control" id="courseNum" required name="courseNum"
+                        formControlName="courseNum" placeholder="Course Number (I.E. 1200)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="instructor"
-            required
-            name="instructor"
-            placeholder="Instructor"
-        />
-    </div>
+                <div class="add-group">
+                    <label id="text-label" for="sectionNum">Section Number</label>
+                    <input type="text" class="class-control" id="sectionNum" required name="sectionNum"
+                        formControlName="section" placeholder="Seciton Number (I.E. 001)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="classSize"
-            required
-            name="classSize"
-            placeholder="Class Size"
-        />
-    </div>
+                <div class="add-group">
+                    <label id="text-label" for="instructor">Instructor</label>
+                    <input type="text" class="class-control" id="instructor" required name="instructor"
+                        formControlName="instructor" placeholder="Instructor (I.E. Jane Doe)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="classStart"
-            required
-            name="classStart"
-            placeholder="Class Start Time (I.E. 0900)"
-        />
-    </div>
+                <div class="add-group">
+                    <label id="text-label" for="classSize">Class Size</label>
+                    <input type="text" class="class-control" id="classSize" required name="classSize"
+                        formControlName="classSize" placeholder="Class Size (I.E. 30)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="classEnd"
-            required
-            name="classEnd"
-            placeholder="Class End Time (I.E. 1030)"
-        />
-    </div>
+                <div class="add-group">
+                    <label id="text-label" for="classStart">Class Start</label>
+                    <input type="text" class="class-control" id="classStart" required name="classStart"
+                        formControlName="classStart" placeholder="Class Start Time (I.E. 0900)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-        type="text"
-        class="class-control"
-        id="building"
-        required
-        name="building"
-        placeholder="Building Code (I.E. PKI)"
-    />   
-    </div>
+                <div class="add-group">
+                    <label id="text-label" for="classEnd">Class End</label>
+                    <input type="text" class="class-control" id="classEnd" required name="classEnd"
+                        formControlName="classEnd" placeholder="Class End Time (I.E. 1030)" />
+                </div>
 
-    <div class="add-group">
-        <input 
-            type="text"
-            class="class-control"
-            id="classRoom"
-            required
-            name="classRoom"
-            placeholder="Class Room Number"
-        />
-    </div>
-    <h1>Select Class Days</h1>  
-    <div class="dowPicker">
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow1">
-            <label for="dow1">M</label>
+                <div class="add-group">
+                    <label id="text-label" for="building">Building Code</label>
+                    <input type="text" class="class-control" id="building" required name="building"
+                        formControlName="roomCode" placeholder="Building Code (I.E. PKI)" />
+                </div>
+
+                <div class="add-group">
+                    <label id="text-label" for="classRoom">Room Number</label>
+                    <input type="text" class="class-control" id="classRoom" required name="classRoom"
+                        formControlName="room" placeholder="Room Number (I.E 155)" />
+                </div>
+            </div>
+            <h1>Select Class Days</h1>
+            <div class="dowPicker">
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow1" formControlName="mon">
+                    <label for="dow1">M</label>
+                </div>
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow2" formControlName="tue">
+                    <label for="dow2">T</label>
+                </div>
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow3" formControlName="wed">
+                    <label for="dow3">W</label>
+                </div>
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow4" formControlName="thu">
+                    <label for="dow4">T</label>
+                </div>
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow5" formControlName="fri">
+                    <label for="dow5">F</label>
+                </div>
+                <div class="dowPickerOption">
+                    <input type="checkbox" id="dow6" formControlName="sat">
+                    <label for="dow6">S</label>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <button id="submitButton" [disabled]="!classForm.form.valid" type="submit"
+                    class="btn btn-success">Submit</button>
+                <button id="home" type="button" class="btn btn-success" [routerLink]="'/results'">Go Home</button>
+            </div>
         </div>
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow2">
-            <label for="dow2">T</label>
-        </div>
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow3">
-            <label for="dow3">W</label>
-        </div>
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow4">
-            <label for="dow4">T</label>
-        </div>
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow5">
-            <label for="dow5">F</label>
-        </div>
-        <div class="dowPickerOption">
-            <input type="checkbox" id="dow6">
-            <label for="dow6">S</label>
-        </div>
-    </div> 
-    <div>
-        <button id="submitButton" [disabled]="!classForm.form.valid" type="submit" class="btn btn-success" [routerLink]="'/success'">Submit</button>
-    </div>
-    <div>
-        <button id="home" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
-    </div>
-</form>
+    </form>
+</div>

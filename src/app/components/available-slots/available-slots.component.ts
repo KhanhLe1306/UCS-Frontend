@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * @param  {'app-available-slots'} {selector
+ * @param  {'./available-slots.component.html'} templateUrl
+ * @param  {['./available-slots.component.css']}} styleUrls
+ */
 @Component({
   selector: 'app-available-slots',
   templateUrl: './available-slots.component.html',

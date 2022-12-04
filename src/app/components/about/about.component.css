@@ -1,0 +1,87 @@
+.navv {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #b60000;
+  }
+  
+  .nav__links {
+    display: flex;
+  }
+  
+  #goHome, #about {
+    font-size: larger;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #b60000;
+    border: 2px solid #b60000;
+    width: fit-content;
+    margin-left: 5px;
+  }
+  
+  #goHome:hover, #about:hover {
+    background-color: white;
+    color: #b60000;
+  }
+  
+  .logo {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    margin-right: 25px;
+  }
+  
+  .logo span {
+    color: black;
+  }
+  .navv {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #b60000;
+  }
+  
+  .nav__links {
+    display: flex;
+  }
+  
+  #goHome, #about {
+    font-size: larger;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #b60000;
+    border: 2px solid #b60000;
+    width: fit-content;
+    margin-left: 5px;
+  }
+  
+  #goHome:hover, #about:hover {
+    border: 2px solid white;
+    background-color: #b60000;
+    color: white;
+  }
+  
+  .logo {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    margin-right: 25px;
+  }
+  
+  .logo span {
+    color: black;
+  }
+  
+  .results-main {
+    padding-top: 50px;
+  }

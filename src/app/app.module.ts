@@ -19,6 +19,7 @@ import { AvailableSlotsComponent } from './components/available-slots/available-
 import { AppRoutingModule } from './app-routing.module';
 import { AddInstructorComponent } from './components/add-instructor/add-instructor.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,13 @@ import { ModalComponent } from './components/modal/modal.component';
     LoginComponent,
     DashboardComponent,
     SuccessComponent,
-    AddClassComponent,
     RemoveClassComponent,
     SearchResultsComponent,
     AvailableSlotsComponent,
     AddInstructorComponent,
     ModalComponent,
+    AddClassComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
