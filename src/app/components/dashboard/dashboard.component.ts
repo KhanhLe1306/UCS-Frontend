@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 //import { RoomService } from 'src/app/services/room.service';
 import { SearchService } from 'src/app/services/search.service';
-
+/**
+ * @param  {'app-dashboard'} {selector
+ * @param  {'./dashboard.component.html'} templateUrl
+ * @param  {['./dashboard.component.css']} styleUrls
+ * @param  {} }
+ */
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -31,7 +36,9 @@ export class DashboardComponent implements OnInit {
   searchForm = new FormGroup({
     inputValue: new FormControl(''),
   });
-
+  /**
+   * @param  {SearchService} privatesearchService
+   */
   constructor(private searchService: SearchService) {
     const searchButton = document.getElementById('searchButton');
     searchButton?.addEventListener('click', this.onSubmit);

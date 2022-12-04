@@ -4,14 +4,17 @@ import { AddService } from 'src/app/services/add-class.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { SharedDataService } from 'src/app/services/shared.service';
 
-
+/**
+ * @param  {'app-add-class'} {selector
+ * @param  {'./add-class.component.html'} templateUrl
+ * @param  {['./add-class.component.css']}} styleUrls
+ */
 @Component({
   selector: 'app-add-class',
   templateUrl: './add-class.component.html',
   styleUrls: ['./add-class.component.css']
 })
 export class AddClassComponent implements OnInit {
-
   results = {};
   selectedMessage:any;
   addClassForm = new FormGroup({
@@ -32,6 +35,11 @@ export class AddClassComponent implements OnInit {
   });
 
   constructor(private addService: AddService, private sharedDataService: SharedDataService, private router: Router) {
+    /**
+     * @param  {} 'home'
+     * @param  {} ;addButton?.addEventListener('click'
+     * @param  {} this.onSubmit
+     */
     const addButton = document.getElementById('home');
     addButton?.addEventListener('click', this.onSubmit);
   }

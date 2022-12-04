@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SearchService } from 'src/app/services/search.service';
 import { ModalService } from 'src/app/services/modal.service';
-
+/**
+ * @param  {'app-search-results'} {selector
+ * @param  {'./search-results.component.html'} templateUrl
+ * @param  {['./search-results.component.css']}} styleUrls
+ */
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',

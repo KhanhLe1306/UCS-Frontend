@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Individual } from 'src/app/Models/Individual';
 import { IndividualService } from 'src/app/services/individual.service';
 import { IndividualListComponent } from '../individual-list/individual-list.component';
-
+/**
+ * @param  {'app-form'} {selector
+ * @param  {'./form.component.html'} templateUrl
+ * @param  {['./form.component.css']} styleUrls
+ * @param  {} }
+ */
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',

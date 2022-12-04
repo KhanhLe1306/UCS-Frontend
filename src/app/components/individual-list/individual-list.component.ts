@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { IndividualService } from 'src/app/services/individual.service';
 import { Individual } from 'src/app/Models/Individual';
-
+/**
+ * @param  {'app-individual-list'} {selector
+ * @param  {'./individual-list.component.html'} templateUrl
+ * @param  {['./individual-list.component.css']} styleUrls
+ * @param  {} }
+ */
 @Component({
   selector: 'app-individual-list',
   templateUrl: './individual-list.component.html',
