@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SharedDataService } from 'src/app/services/shared.service';
-
+/**
+ * @param  {'app-success'} {selector
+ * @param  {'./success.component.html'} templateUrl
+ * @param  {['./success.component.css']}} styleUrls
+ */
 @Component({
   selector: 'app-success',
   templateUrl: './success.component.html',
