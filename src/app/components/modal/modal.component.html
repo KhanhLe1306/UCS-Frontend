@@ -1,36 +1,29 @@
 <div class="overlay" (click)="modalService.showModal = false"></div>
 <div class="modal-container">
   <div class="header">
-    <div>{{ scheduleClass.clssID }}</div>
-    <ng-container *ngIf="scheduleClass.crossListedWith != null"
-      ><div>{{ scheduleClass.crossListedWith }}</div></ng-container
-    >
+    <div class="class-id">{{ scheduleClass.clssID }}</div>
+    <ng-container *ngIf="scheduleClass.crossListedWith != null">
+      <div class="cross">Cross-listed with {{ scheduleClass.crossListedWith }}</div>
+    </ng-container>
   </div>
-  <div>{{ scheduleClass.courseTitle }}</div>
+  <div class="title">{{ scheduleClass.courseTitle }}</div>
   <div [formGroup]="editForm">
-
-    <div class="labels">
-      <p>Start Time:</p>
-      <p>End Time:</p>
-      <p>Meeting Days</p>
-    </div>
     <div>
-      <label id="start" for="startTime">StartTime: </label>
+      <label id="start" for="startTime">Start Time</label>
       <input type="text" formControlName="startTime" id="startTime" />
     </div>
     <div>
-      <label id="end" for="endTime">EndTime</label>
+      <label id="end" for="endTime">End Time</label>
       <input type="text" formControlName="endTime" id=" startTime" />
     </div>
     <div>
-      <label id="days" for="meetingDays">MeetingDays</label>
+      <label id="days" for="meetingDays">Meeting Days</label>
       <input type="text" formControlName="meetingDays" id="meetingDays" />
     </div>
-  </div>
-  <div class="modal-buttons">
-    <span (click)="modalService.showModal = false" class="modal-cancel"
-      >Cancel</span
-    >
-    <span (click)="onSave()" class="modal-saveChanges">Save Changes</span>
+
+    <div class="modal-buttons">
+      <span (click)="modalService.showModal = false" class="modal-cancel">Cancel</span>
+      <span (click)="onSave()" class="modal-saveChanges">Save Changes</span>
+    </div>
   </div>
 </div>

@@ -1,33 +1,44 @@
-<div class="remove-class">
-    <h1>Remove a Course</h1>
-    <div>
-        <input 
-            type="text"
-            class="remove-class"
-            id="classNum"
-            placeholder="Class Number"
-        />
+<div class="navv">
+    <div class="logo">
+        <span>PKI</span> Classroom Scheduler
     </div>
-    <div>
-        <input 
-            type="text"
-            class="remove-class"
-            id="classSection"
-            placeholder="Class Section Number"
-        />
-    </div>
-    <div>
-        <input 
-            type="text"
-            class="remove-class"
-            id="instructor"
-            placeholder="Class Instructor"
-        />
-    </div>
-    <div>
-        <button id="removeButton" type="submit" class="btn btn-success" [routerLink]="'/results'">Submit</button>
-    </div>
-    <div>
-        <button id="home" type="button" class="btn btn-success" [routerLink]="'/dashboard'">Go Home</button>
+    <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+        Home
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+        About
+    </button>
+    <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+        Other Options
+    </button>
+</div>
+<div class="results-main">
+    <div class="remove-class">
+        <div class="header">
+            <h1>Remove a Course</h1>
+        </div>
+        <div class="text-inputs">
+            <div class="remove-group">
+                <label  id="text-label" for="classNum">Class Number</label>
+                <input type="text" class="remove-class" id="classNum" placeholder="Class Number" />
+            </div>
+            <div class="remove-group">
+                <label id="text-label" for="classSection">Section Number</label>
+                <input type="text" class="remove-class" id="classSection" placeholder="Class Section Number" />
+            </div>
+            <div class="remove-group">
+                <label id="text-label" for="instructor">Instructor</label>
+                <input type="text" class="remove-class" id="instructor" placeholder="Class Instructor" />
+            </div>
+
+        </div>
+        <div class="remove-buttons">
+            <div>
+                <button id="removeButton" type="submit" class="btn btn-success" [routerLink]="'/results'">Submit</button>
+            </div>
+            <div>
+                <button id="home" type="button" class="btn btn-success" [routerLink]="'/results'">Go Home</button>
+            </div>
+        </div>
     </div>
 </div>

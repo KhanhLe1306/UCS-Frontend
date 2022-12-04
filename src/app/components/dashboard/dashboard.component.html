@@ -1,45 +1,38 @@
-<div class="suggestChanges">
-  <p>Suggest Changes</p>
-  <button
-    id="searchButton"
-    type="button"
-    class="btn btn-success"
-    [routerLink]="'/results'"
-  >
-    Search for, Add, Move, or Remove Course
+<div class="navv">
+  <div class="logo">
+    <span>PKI</span> Classroom Scheduler
+  </div>
+  <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
+    Home
+  </button>
+  <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
+    About
+  </button>
+  <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+    Other Options
   </button>
 </div>
-<br />
-<div class="downloadCSV">
-  <p>Other Options</p>
-  <div>
-    <button
-      id="download"
-      type="submit"
-      class="btn btn-success"
-      [routerLink]="'/success'"
-    >
-      Download Current Schedule as CSV
-    </button>
-  </div>
-  <div>
-    <button
-      id="upload"
-      type="submit"
-      class="btn btn-success"
-      [routerLink]="'/fileUpload'"
-    >
-      Upload Current Schedule as CSV
-    </button>
-  </div>
-  <div>
-  <button
-    id="logOut"
-    type="button"
-    class="btn btn-success"
-    [routerLink]="'/login'"
-  >
-    Log out
-  </button>
+<div class="dash">
+  <div class="downloadCSV">
+    <div class="header">
+      <h1>Other Options</h1>
+    </div>
+    <div class="dash-buttons">
+      <div>
+        <button id="download" type="submit" class="btn btn-success" [routerLink]="'/success'">
+          Download Current Schedule as CSV
+        </button>
+      </div>
+      <div>
+        <button id="upload" type="submit" class="btn btn-success" [routerLink]="'/fileUpload'">
+          Upload Current Schedule as CSV
+        </button>
+      </div>
+      <div>
+        <button id="logOut" type="button" class="btn btn-success" [routerLink]="'/login'">
+          Log out
+        </button>
+      </div>
+    </div>
   </div>
 </div>
