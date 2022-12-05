@@ -39,13 +39,13 @@ export class ModalComponent implements OnInit {
     this.modalService.showModal = false;
     //console.log(this.editForm.value);
     const body = {
-      Cls: 'xxx',
-      Section: 'aaa',
-      Instructor: 'bbb',
-      ClassSize: 'ccc',
+      CourseNumber: 'xxx',
+      SectionNumber: 'aaa',
+      InstructorName: 'bbb',
+      Enrollment: 'ccc',
       ClassTime: 'ddd',
       RoomCode: 'fff',
-      Room: 'ccc',
+      RoomNumber: 'ccc',
       Days: 'xxx',
     };
 
