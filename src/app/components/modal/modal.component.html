@@ -1,7 +1,7 @@
 <div class="overlay" (click)="modalService.showModal = false"></div>
 <div class="modal-container">
   <div class="header">
-    <div class="class-id">{{ scheduleClass.clssID }}</div>
+    <div class="class-id">{{ scheduleClass.course }}</div>
     <ng-container *ngIf="scheduleClass.crossListedWith != null">
       <div class="cross">Cross-listed with {{ scheduleClass.crossListedWith }}</div>
     </ng-container>
