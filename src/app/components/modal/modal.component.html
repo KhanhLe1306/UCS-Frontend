@@ -22,6 +22,7 @@
     </div>
 
     <div class="modal-buttons">
+      <span (click)="onRemove()" class="modal-cancel">Remove</span>
       <span (click)="modalService.showModal = false" class="modal-cancel">Cancel</span>
       <span (click)="onSave()" class="modal-saveChanges">Save Changes</span>
     </div>

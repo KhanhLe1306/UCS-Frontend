@@ -1,16 +1,32 @@
-<app-modal *ngIf="modalService.showModal != false"></app-modal>
+<app-modal
+  [scheduleClassFromParent]="scheduleClass"
+  *ngIf="modalService.showModal != false"
+></app-modal>
 
 <div class="navv">
-  <div class="logo">
-      <span>PKI</span> Classroom Scheduler
-  </div>
-  <button id="goHome" type="button" class="btn btn-success" [routerLink]="'/results'">
-      Home
+  <div class="logo"><span>PKI</span> Classroom Scheduler</div>
+  <button
+    id="goHome"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/results'"
+  >
+    Home
   </button>
-  <button id="about" type="button" class="btn btn-success" [routerLink]="'/about'">
-      About
+  <button
+    id="about"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/about'"
+  >
+    About
   </button>
-  <button id="about" type="button" class="btn btn-success" [routerLink]="'/dashboard'">
+  <button
+    id="about"
+    type="button"
+    class="btn btn-success"
+    [routerLink]="'/dashboard'"
+  >
     Other Options
   </button>
 </div>
@@ -19,12 +35,16 @@
   <div class="form-div">
     <form class="results-form" (ngSubmit)="onSubmit()" [formGroup]="searchForm">
       <div class="resultsForm">
-        <div class="header">
-          View Room or Instructor Schedule
-        </div>
+        <div class="header">View Room or Instructor Schedule</div>
         <div class="dashSearch">
-          <input type="text" class="dashSearch-control" id="dashSearch" formControlName="inputValue"
-            placeholder="Enter Room Number or Instructor" v />
+          <input
+            type="text"
+            class="dashSearch-control"
+            id="dashSearch"
+            formControlName="inputValue"
+            placeholder="Enter Room Number or Instructor"
+            v
+          />
           <button id="searchButton" type="submit" class="btn btn-search">
             Search
           </button>
@@ -32,14 +52,16 @@
       </div>
     </form>
   </div>
-  
+
   <ng-container *ngIf="roomSchedule">
     <div class="schedule">
       <div class="time-col">
         <div class="col_title">TIME</div>
         <div class="col_schedule">
           <ng-container *ngFor="let i of timesUpdated">
-            <div class="time-item" style="height: 52.5px; margin: 0px">{{ i }}</div>
+            <div class="time-item" style="height: 52.5px; margin: 0px">
+              {{ i }}
+            </div>
           </ng-container>
         </div>
       </div>
@@ -47,10 +69,17 @@
         <div class="col_title">MON</div>
         <div class="col_schedule">
           <ng-container *ngFor="let i of roomSchedule">
-            <ng-container *ngIf="i.meetingDays.includes('Monday')">
-              <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
-                [style.marginTop.px]="i.priorCourseInfo['Monday']['marginSize']" [style.marginBottom.px]="0"
-                [style.height.px]="i.priorCourseInfo['Monday']['height']">
+            <ng-container
+              *ngIf="i.meetingDays.includes('Monday') && i.IsDeleted != true"
+            >
+              <div
+                (click)="showModal(i)"
+                class="class_info"
+                [style.background-color]="i.color"
+                [style.marginTop.px]="i.priorCourseInfo['Monday']['marginSize']"
+                [style.marginBottom.px]="0"
+                [style.height.px]="i.priorCourseInfo['Monday']['height']"
+              >
                 <div class="course__title">
                   <div class="course">{{ i.course }}</div>
                   <ng-container *ngIf="i.crossListedWith != null">
@@ -69,10 +98,19 @@
         <div class="col_title">TUE</div>
         <div class="col_schedule">
           <ng-container *ngFor="let i of roomSchedule">
-            <ng-container *ngIf="i.meetingDays.includes('Tuesday')">
-              <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
-                [style.marginTop.px]="i.priorCourseInfo['Tuesday']['marginSize']" [style.marginBottom.px]="0"
-                [style.height.px]="i.priorCourseInfo['Tuesday']['height']">
+            <ng-container
+              *ngIf="i.meetingDays.includes('Tuesday') && i.IsDeleted != true"
+            >
+              <div
+                (click)="showModal(i)"
+                class="class_info"
+                [style.background-color]="i.color"
+                [style.marginTop.px]="
+                  i.priorCourseInfo['Tuesday']['marginSize']
+                "
+                [style.marginBottom.px]="0"
+                [style.height.px]="i.priorCourseInfo['Tuesday']['height']"
+              >
                 <div class="course__title">
                   <div>{{ i.course }}</div>
                   <ng-container *ngIf="i.crossListedWith != null">
@@ -91,10 +129,19 @@
         <div class="col_title">WED</div>
         <div class="col_schedule">
           <ng-container *ngFor="let i of roomSchedule">
-            <ng-container *ngIf="i.meetingDays.includes('Wednesday')">
-              <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
-                [style.marginTop.px]="i.priorCourseInfo['Wednesday']['marginSize']" [style.marginBottom.px]="0"
-                [style.height.px]="i.priorCourseInfo['Wednesday']['height']">
+            <ng-container
+              *ngIf="i.meetingDays.includes('Wednesday') && i.IsDeleted != true"
+            >
+              <div
+                (click)="showModal(i)"
+                class="class_info"
+                [style.background-color]="i.color"
+                [style.marginTop.px]="
+                  i.priorCourseInfo['Wednesday']['marginSize']
+                "
+                [style.marginBottom.px]="0"
+                [style.height.px]="i.priorCourseInfo['Wednesday']['height']"
+              >
                 <div class="course__title">
                   <div>{{ i.course }}</div>
                   <ng-container *ngIf="i.crossListedWith != null">
@@ -113,10 +160,19 @@
         <div class="col_title">THU</div>
         <div class="col_schedule">
           <ng-container *ngFor="let i of roomSchedule">
-            <ng-container *ngIf="i.meetingDays.includes('Thursday')">
-              <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
-                [style.marginTop.px]="i.priorCourseInfo['Thursday']['marginSize']" [style.marginBottom.px]="0"
-                [style.height.px]="i.priorCourseInfo['Thursday']['height']">
+            <ng-container
+              *ngIf="i.meetingDays.includes('Thursday') && i.IsDeleted != true"
+            >
+              <div
+                (click)="showModal(i)"
+                class="class_info"
+                [style.background-color]="i.color"
+                [style.marginTop.px]="
+                  i.priorCourseInfo['Thursday']['marginSize']
+                "
+                [style.marginBottom.px]="0"
+                [style.height.px]="i.priorCourseInfo['Thursday']['height']"
+              >
                 <div class="course__title">
                   <div>{{ i.course }}</div>
                   <ng-container *ngIf="i.crossListedWith != null">
@@ -136,9 +192,14 @@
         <div class="col_schedule">
           <ng-container *ngFor="let i of roomSchedule">
             <ng-container *ngIf="i.meetingDays.includes('Friday')">
-              <div (click)="showModal(i)" class="class_info" [style.background-color]="i.color"
-                [style.marginTop.px]="i.priorCourseInfo['Friday']['marginSize']" [style.marginBottom.px]="0"
-                [style.height.px]="i.priorCourseInfo['Friday']['height']">
+              <div
+                (click)="showModal(i)"
+                class="class_info"
+                [style.background-color]="i.color"
+                [style.marginTop.px]="i.priorCourseInfo['Friday']['marginSize']"
+                [style.marginBottom.px]="0"
+                [style.height.px]="i.priorCourseInfo['Friday']['height']"
+              >
                 <div class="course__title">
                   <div>{{ i.course }}</div>
                   <ng-container *ngIf="i.crossListedWith != null">
@@ -157,20 +218,34 @@
   </ng-container>
   <div class="other-options">
     <div>
-      <button id="addClass" type="button" class="btn btn-success" [routerLink]="'/addClass'">
+      <button
+        id="addClass"
+        type="button"
+        class="btn btn-success"
+        [routerLink]="'/addClass'"
+      >
         Add Class
       </button>
     </div>
     <div>
-      <button id="addInstructor" type="button" class="btn btn-success" [routerLink]="'/addInstructor'">
+      <button
+        id="addInstructor"
+        type="button"
+        class="btn btn-success"
+        [routerLink]="'/addInstructor'"
+      >
         Add Instructor
       </button>
     </div>
     <div>
-      <button id="removeClass" type="button" class="btn btn-success" [routerLink]="'/removeClass'">
+      <button
+        id="removeClass"
+        type="button"
+        class="btn btn-success"
+        [routerLink]="'/removeClass'"
+      >
         Remove Class
       </button>
     </div>
   </div>
-
 </div>
