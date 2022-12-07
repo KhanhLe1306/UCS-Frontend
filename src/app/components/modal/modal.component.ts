@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UpdateClassModel } from 'src/app/Models/interface';
 /**
  * @param  {'app-modal'} {selector
  * @param  {'./modal.component.html'} templateUrl
@@ -41,24 +42,25 @@ export class ModalComponent implements OnInit {
   onSave() {
     this.modalService.showModal = false;
     //console.log(this.editForm.value);
-    const body = {
-      CourseNumber: 'xxx',
-      SectionNumber: 'aaa',
-      InstructorName: 'bbb',
-      Enrollment: 'ccc',
-      ClassTime: 'ddd',
-      RoomCode: 'fff',
-      RoomNumber: 'ccc',
-      Days: 'xxx',
+
+    const updateClassModel: UpdateClassModel = {
+      ScheduleID: this.scheduleClassFromParent.scheduleID,
+      StartTime: this.editForm.value.startTime,
+      EndTime: this.editForm.value.endTime,
+      MeetingDays: this.editForm.value.meetingDays,
+      RoomName: this.scheduleClassFromParent.roomName,
+      InstructorName: this.scheduleClassFromParent.instructor,
     };
 
-    this.modalService.addClass(body).subscribe((res) => console.log(res));
+    console.log(updateClassModel);
+    this.modalService.saveClassChanges(updateClassModel).subscribe();
   }
 
   onRemove() {
     this.modalService.showModal = false;
     this.scheduleClassFromParent.IsDeleted = true;
-    this.modalService.removeClass(this.scheduleClass.classID).subscribe(() => {
-    });
+    this.modalService
+      .removeClass(this.scheduleClass.classID)
+      .subscribe(() => {});
   }
 }
