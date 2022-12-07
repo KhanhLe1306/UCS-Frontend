@@ -1,99 +1,109 @@
-.overlay{
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 2;
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
 }
-.modal-container{
-    width: fit-content;
-    height: 250px;
-    margin: auto;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    background-color: white;
-    position: absolute;
-    z-index: 3;
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-}
-
-.modal-buttons{
-    width: 100%;
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
+.modal-container {
+  width: fit-content;
+  height: 250px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-span{
-    display: inline-block;
-    margin-left: 10px;
-    cursor: pointer;
-    padding: 5px;
-    border: 2px solid black;
-    background-color: black;
-    color:white;
-    transition: ease all 0.5s;
-    border-radius: 10px;
+.modal-buttons {
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  transition: ease all 0.5s;
+  border-radius: 10px;
+}
+
+.modal-remove {
+  background-color: red;
+  border: none;
+}
+
+.modal-remove:hover {
+  background-color: beige;
+  color: red;
+  border: 1px red solid;
 }
 
 .modal-saveChanges:hover {
-    background-color: white;
-    border: 2px solid #12b609;
-    color: #12b609;
+  background-color: white;
+  border: 2px solid #12b609;
+  color: #12b609;
 }
 
 .modal-cancel:hover {
-    background-color: white;
-    border: 2px solid #b60000;
-    color: #b60000;
-    
+  background-color: white;
+  border: 2px solid #b60000;
+  color: #b60000;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .input {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: x-large;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 label {
-    min-width: fit-content;
-    width: 150px;
-    margin-bottom: 10px;
-    font-size: large;
-    font-weight: bold;
+  min-width: fit-content;
+  width: 150px;
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
 }
 
 input {
-    border: 2px solid #989795;
-    border-radius: 10px;
-    outline: none;
-    transition: ease all 0.5s;
-    padding: 2px;
-    float: right;
-    font-weight: bold;
+  border: 2px solid #989795;
+  border-radius: 10px;
+  outline: none;
+  transition: ease all 0.5s;
+  padding: 2px;
+  float: right;
+  font-weight: bold;
 }
 
 input:focus {
-    border: 2px solid #b60000;
+  border: 2px solid #b60000;
 }

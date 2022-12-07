@@ -3,7 +3,9 @@
   <div class="header">
     <div class="class-id">{{ scheduleClass.course }}</div>
     <ng-container *ngIf="scheduleClass.crossListedWith != null">
-      <div class="cross">Cross-listed with {{ scheduleClass.crossListedWith }}</div>
+      <div class="cross">
+        Cross-listed with {{ scheduleClass.crossListedWith }}
+      </div>
     </ng-container>
   </div>
   <div class="title">{{ scheduleClass.courseTitle }}</div>
@@ -22,9 +24,15 @@
     </div>
 
     <div class="modal-buttons">
-      <span (click)="onRemove()" class="modal-cancel">Remove</span>
-      <span (click)="modalService.showModal = false" class="modal-cancel">Cancel</span>
-      <span (click)="onSave()" class="modal-saveChanges">Save Changes</span>
+      <div class="btn-remove-containner">
+        <span (click)="onRemove()" class="modal-remove">Remove</span>
+      </div>
+      <div>
+        <span (click)="modalService.showModal = false" class="modal-cancel"
+          >Cancel</span
+        >
+        <span (click)="onSave()" class="modal-saveChanges">Save Changes</span>
+      </div>
     </div>
   </div>
 </div>
