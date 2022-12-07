@@ -14,6 +14,7 @@ import { ModalService } from 'src/app/services/modal.service';
 })
 export class SearchResultsComponent implements OnInit {
   roomSchedule: any = {};
+  scheduleClass: any;
   backgroundColor = [
     '#8B0000',
     '#FF0000',
@@ -93,6 +94,7 @@ export class SearchResultsComponent implements OnInit {
   showModal(scheduleClass: any) {
     this.modalService.showModal = true;
     this.modalService.scheduleClass = scheduleClass;
+    this.scheduleClass = scheduleClass;
   }
 
 }
