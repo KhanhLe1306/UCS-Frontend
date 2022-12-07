@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UpdateClassModel } from '../Models/interface';
 import { BaseService } from './base.service';
 
 @Injectable({
@@ -15,12 +16,12 @@ export class ModalService extends BaseService {
   }
 
   routes = {
-    SaveClassChanges: () => ``,
+    SaveClassChanges: () => `class/updateClass`,
     AddClass: () => `class/addClass`,
     RemoveClass: (classID: number) => `class/removeClass/${classID}`,
   };
 
-  saveClassChanges(body: any): Observable<any> {
+  saveClassChanges(body: UpdateClassModel): Observable<any> {
     const url = this.routes.SaveClassChanges();
     return this.sendRequest({ body: body, url: url, method: 'POST' });
   }
