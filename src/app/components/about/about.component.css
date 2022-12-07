@@ -85,3 +85,26 @@
   .results-main {
     padding-top: 50px;
   }
+
+  h1, h4, p {
+    text-align: center;
+  }
+
+  ul {
+    display: table;
+    margin: 0 auto 15px;
+  }
+
+  img {
+    width:  200px;
+    height: 250px;
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  label {
+    text-align: center;
+  }
