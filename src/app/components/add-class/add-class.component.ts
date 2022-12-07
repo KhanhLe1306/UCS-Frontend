@@ -18,6 +18,8 @@ export class AddClassComponent implements OnInit {
   results = {};
   selectedMessage: any;
   addClassForm = new FormGroup({
+    courseTitle: new FormControl(''),
+    subjectCode: new FormControl(' '),
     courseNum: new FormControl(''),
     section: new FormControl(''),
     instructor: new FormControl(''),
@@ -72,6 +74,8 @@ export class AddClassComponent implements OnInit {
     console.log(daysjoin);
     this.addService
       .addClass({
+        courseTitle: this.addClassForm.value.courseTitle,
+        subjectCode: this.addClassForm.value.subjectCode,
         courseNumber: this.addClassForm.value.courseNum,
         sectionNumber: this.addClassForm.value.section,
         instructorName: this.addClassForm.value.instructor,
