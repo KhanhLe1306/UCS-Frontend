@@ -19,7 +19,7 @@ export class AddClassComponent implements OnInit {
   selectedMessage: any;
   addClassForm = new FormGroup({
     courseTitle: new FormControl(''),
-    subjectCode: new FormControl(' '),
+    subjectCode: new FormControl(''),
     courseNum: new FormControl(''),
     section: new FormControl(''),
     instructor: new FormControl(''),

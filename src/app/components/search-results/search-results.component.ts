@@ -45,36 +45,88 @@ export class SearchResultsComponent implements OnInit {
     const input = this.searchForm.value.inputValue;
     this.iterator = 0;
     if (input.length > 3) {
-      const names = input.split(' ')
+      if (input.indexOf(' ') >= 0) {
+        const names = input.split(' ')
+        this.searchService
+          .getScheduleByInstructor(names[0], names[1])
+          .subscribe((res) => {
+            if (res.length != 0) {
+              res.forEach((e) => {
+                e.color = this.backgroundColor[this.iterator++];
+              });
+              this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+              this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
+              var max = 0;
+              this.roomSchedule.forEach((room) => {
+                if (room.endTime > max) {
+                  max = room.endTime;
+                }
+              })
+              this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= max);
+              this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+            }
+          });
+      } else {
+        this.searchService
+          .getScheduleByRoomNumber("999")
+          .subscribe((res) => {
+            if (res.length != 0) {
+              res.forEach((e) => {
+                e.color = this.backgroundColor[this.iterator++];
+              });
+              this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+              this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
+              var max = 0;
+              this.roomSchedule.forEach((room) => {
+                if (room.endTime > max) {
+                  max = room.endTime;
+                }
+              })
+              this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= max);
+              this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+            }
+          });
+      }
+    } else if (input.length == 3 && /^\d+$/.test(input)) {
       this.searchService
-      .getScheduleByInstructor(names[0], names[1])
-      .subscribe((res) => {
-        if (res.length != 0) {
-          res.forEach((e) => {
-            e.color = this.backgroundColor[this.iterator++];
-          });
-          this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
-          this.roomSchedule[0].startTime;
-          this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
-          this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= this.roomSchedule[this.roomSchedule.length-1].endTime);
-          console.log(this.roomSchedule);
-        }
-      });
+        .getScheduleByRoomNumber(input)
+        .subscribe((res) => {
+          if (res.length != 0) {
+            res.forEach((e) => {
+              e.color = this.backgroundColor[this.iterator++];
+            });
+            this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+            this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
+            var max = 0;
+            this.roomSchedule.forEach((room) => {
+              if (room.endTime > max) {
+                max = room.endTime;
+              }
+            })
+            this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= max);
+            this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+          }
+        });
     } else {
-    this.searchService
-      .getScheduleByRoomNumber(input)
-      .subscribe((res) => {
-        if (res.length != 0) {
-          res.forEach((e) => {
-            e.color = this.backgroundColor[this.iterator++];
-          });
-          this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
-          this.roomSchedule[0].startTime;
-          this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
-          this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= this.roomSchedule[this.roomSchedule.length-1].endTime);
-          console.log(this.roomSchedule);
-        }
-      });
+      this.searchService
+        .getScheduleByRoomNumber("999")
+        .subscribe((res) => {
+          if (res.length != 0) {
+            res.forEach((e) => {
+              e.color = this.backgroundColor[this.iterator++];
+            });
+            this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+            this.timesUpdated = this.times.filter(x => Number(x) >= this.roomSchedule[0].startTime);
+            var max = 0;
+            this.roomSchedule.forEach((room) => {
+              if (room.endTime > max) {
+                max = room.endTime;
+              }
+            })
+            this.timesUpdated = this.timesUpdated.filter(x => Number(x) <= max);
+            this.roomSchedule = res.sort((x, y) => x.startTime - y.startTime);
+          }
+        });
     }
   }
 

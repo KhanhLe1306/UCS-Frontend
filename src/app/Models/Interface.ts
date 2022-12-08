@@ -12,4 +12,8 @@ export interface UpdateClassModel {
   MeetingDays: string;
   RoomName: string;
   InstructorName: string;
+  Course: string;
+  CrossListedClssId: string;
+  Section: string;
+  ClassId: string;
 }
