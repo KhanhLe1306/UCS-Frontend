@@ -3,6 +3,8 @@ import { ModalService } from 'src/app/services/modal.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UpdateClassModel } from 'src/app/Models/interface';
+import { SharedDataService } from 'src/app/services/shared.service';
+
 /**
  * @param  {'app-modal'} {selector
  * @param  {'./modal.component.html'} templateUrl
@@ -25,7 +27,7 @@ export class ModalComponent implements OnInit {
     meetingDays: new FormControl(),
   });
 
-  constructor(public modalService: ModalService, private router: Router) {}
+  constructor(public modalService: ModalService, private sharedDataService: SharedDataService, private router: Router) {}
 
   ngOnInit(): void {
     this.scheduleClass = this.modalService.scheduleClass;
@@ -50,10 +52,18 @@ export class ModalComponent implements OnInit {
       MeetingDays: this.editForm.value.meetingDays,
       RoomName: this.scheduleClassFromParent.roomName,
       InstructorName: this.scheduleClassFromParent.instructor,
+      CrossListedClssId: this.scheduleClassFromParent.crossListedClssID ? this.scheduleClassFromParent.crossListedClssID : '0',
+      Course: this.scheduleClassFromParent.course,
+      Section: this.scheduleClassFromParent.section,
+      ClassId: this.scheduleClassFromParent.classID
     };
 
-    console.log(updateClassModel);
-    this.modalService.saveClassChanges(updateClassModel).subscribe();
+
+    this.modalService.saveClassChanges(updateClassModel).subscribe((res) => {
+      this.sharedDataService.changeMessage(JSON.stringify(res));
+      console.log(res);
+      this.router.navigate(['/success']);
+    });
   }
 
   onRemove() {

@@ -24,10 +24,9 @@
         <div id="information">
             <h2 id="summary">SUMMARY</h2>
             <div id="success-information-container" *ngFor="let item of selectedMessage['messages']">
-                <p>Instructor: {{ item['header'] }}</p>
-                <p>Room: {{ item['message-primary'] }}</p>
-                <p>Time: {{ item['message-secondary'].split(',')[0] }}</p>
-                <p>Days: {{ item['message-secondary'].split(',')[1] }}</p>
+                <p>{{ item['header'] }}</p>
+                <p>{{ item['message-primary'] }}</p>
+                <p>{{ item['message-secondary'] }}</p>
             </div>
         </div>
     </div>
@@ -45,7 +44,7 @@
                 <p id="fail-header">Conflict: {{ item['header'] }}</p>
                 <div class="fail-info">
                     <p>{{ item['message-primary'] }}</p>
-                    <p>{{ item['message-secondary'].split(',')[0] }}</p>
+                    <p>{{ item['message-secondary'] }}</p>
                 </div>
             </div>
         </div>
