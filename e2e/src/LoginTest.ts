@@ -22,4 +22,5 @@ describe('katalon', () => {
 		} as logging.Entry));
 	});
 
+	
 });
