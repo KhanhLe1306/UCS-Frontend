@@ -12,16 +12,15 @@ describe('katalon', () => {
 		await element(by.id("password")).click();
 		await element(by.id("password")).sendKeys('a');
 		await element(by.id("submitButton")).click();
-		await browser.get('http://localhost:4200/dashboard');
-		await element(by.id("logOut")).click();
 	});
 
 	afterEach(async () => {
 		// Assert that there are no errors emitted from the browser
 		const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-		expect(logs).not.toContain(jasmine.objectContaining({
+		expect(logs).toContain(jasmine.objectContaining({
 			level: logging.Level.SEVERE,
 		} as logging.Entry));
 	});
 
+	
 });
