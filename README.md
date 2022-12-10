@@ -28,7 +28,7 @@ In short, our application is meant to be an automatic and manual way to edit the
 
 ## Release Notes
 
-Manual class adding, removal, editing. Adding Instructors works, searching by room number and instructor name also works. Logging in does not work, signing up does not work, automated scheduling does not work. Code is not deployed to any webserver either, everything was ran locally.
+Manual class adding, removal, editing. Adding Instructors works, searching by room number and instructor name also works. Logging in does not work, signing up does not work, automated scheduling does not work. File upload and download also do not work right. Code is not deployed to any webserver either, everything was ran locally.
 
 ## Branch Info
 
